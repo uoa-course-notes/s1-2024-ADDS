@@ -1,0 +1,97 @@
+1. SRP
+- The referee class shouldn't be responsible for taking in user input (human's move).  
+	+ Fix: implementing a setter in Human.h instead
+- announceWinner() shouldn't be in Referee and should be in its own class
+- scores tacking (humanScore and computerScore) shouldn't be in the class
+
+2. OCP
+- playRound() shouldn't be in the class because if we played a game of RPSLS, then we will have 
+
+- play() implements using concrete objects of types Human and Computer instead of the interface or abstract class Player. If we were to pit a human against another, then we would have to either create another method or modify the current one.
+
+3. LSP
+4. ISP
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // This code contains several violations of OO design principles.
+// How many can you find and how would you correct them?
+#include <iostream>
+#include <string>
+#include "Human.h" // assume these exist
+#include "Computer.h" // assume these exist
+// Assume Player.h exists
+
+
+class Referee {
+public:
+
+
+// Violation: Dependency Inversion Principle
+// Reason:
+// Fix: 
+ 
+void play(int rounds, Human player1, Computer player2) {
+for (int i = 0; i < rounds; i++) {
+playRound();
+}
+announceWinner();
+}
+private:
+std::string humanMove;
+int humanScore = 0;
+int computerScore = 0;
+
+
+// Violation: OCP - there 
+// Reason: 
+// Fix: create a new move() method. 
+
+int playRound() {
+std::cout << "Enter move: ";
+std::cin >> humanMove;
+
+
+// OCP
+// 
+if (humanMove == "paper") {
+humanScore++;
+} else if (humanMove == "scissors") {
+computerScore++;
+}
+}
+
+// Violation: SRP
+// Reason: 
+// Fix: 
+void announceWinner() {
+if (humanScore > computerScore)
+std::cout << "Human wins!" << std::endl;
+else if (computerScore > humanScore)
+std::cout << "Computer wins!" << std::endl;
+else
+std::cout << "It's a tie!" << std::endl;
+}
+};
+
+
+
+
+int main(void) {
+Referee referee;
+referee.play(3);
+return 0;
+}
+
+
+
