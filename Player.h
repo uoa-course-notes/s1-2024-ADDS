@@ -3,17 +3,20 @@
 #include <iostream>
 #include <string>
 
+#include "Move.h"
+
 class Player{
     protected:
-        char move;
+        Move* move;
         std::string name;
     public:
-        Player(std::string name, char move);
-        Player(std::string name);
-        Player();
-        virtual char makeMove() = 0;
-        virtual std::string getName() = 0;
-        virtual ~Player();
+        // Player(std::string name, char move);
+        // Player(std::string name);
+
+        // Player();
+        virtual std::string getName();
+        virtual Move* makeMove();
+        virtual ~Player() = 0;
 
 
 
