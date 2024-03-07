@@ -1,31 +1,18 @@
 #ifndef MOVE_H
 #define MOVE_H
 
-
 #include <string>
 #include <vector>
-
-
-
 class Move{
-	private:
+	protected:
 	    std::string name;
-	    std::vector<std::string> relationship;
+	    std::vector<std::string> winRelationship;
+	    std::vector<std::string> loseRelationship;
 	public:	
 		// Returns the name of a Move instance, for example "Ninja"
-		virtual std::string getName() = 0;
-
-		
-
-
-	    virtual ~Move() = 0;
-
-
-
+	 std::string getName();
+	 int compareMoves(Move* move);
 };
-
-
-
 
 
 #endif

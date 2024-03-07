@@ -15,7 +15,7 @@ class Player{
 
         Player();
         virtual std::string getName() = 0;
-        virtual Move* makeMove() = 0;
+        virtual Move* makeMove();
         virtual ~Player() = 0;
 
 

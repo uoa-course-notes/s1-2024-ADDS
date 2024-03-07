@@ -9,7 +9,7 @@
 // Player::Player():
 //     Player("", ""){}
 
-
+Move* Player::makeMove(){return move;}
 
 
 

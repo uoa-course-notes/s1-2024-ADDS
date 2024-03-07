@@ -3,7 +3,7 @@
 Computer::Computer(): Player("Computer", 'R'){}
 
 std::string Computer::getName(){return name;}
-char Computer::makeMove(){return move;}
+Move* Computer::makeMove(){return move;}
 
 Computer::~Computer(){}
 
