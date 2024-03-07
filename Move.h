@@ -9,13 +9,14 @@
 
 class Move{
 	private:
-	    std::string name ;
+	    std::string name;
 	    std::vector<std::string> relationship;
 	public:	
 		// Returns the name of a Move instance, for example "Ninja"
+		virtual std::string getName() = 0;
 
-		std::string getName();
 		
+
 
 	    virtual ~Move() = 0;
 

@@ -10,12 +10,12 @@ class Player{
         Move* move;
         std::string name;
     public:
-        // Player(std::string name, char move);
-        // Player(std::string name);
+        Player(std::string name, char move);
+        Player(std::string name);
 
-        // Player();
-        virtual std::string getName();
-        virtual Move* makeMove();
+        Player();
+        virtual std::string getName() = 0;
+        virtual Move* makeMove() = 0;
         virtual ~Player() = 0;
 
 

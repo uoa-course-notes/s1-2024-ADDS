@@ -4,10 +4,13 @@
 //     : name(name), move(move){}
 
 
-Player::Player(std::string name): name(name){}
+// Player::Player(std::string name): name(name){}
 
-Player::Player():
-    Player("", ""){}
+// Player::Player():
+//     Player("", ""){}
+
+
+
 
 
 Player::~Player(){}
