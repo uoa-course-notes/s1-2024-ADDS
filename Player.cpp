@@ -1,15 +1,19 @@
 #include "Player.h"
 
-// Player::Player(std::string name, std::string move)
-//     : name(name), move(move){}
+Player::Player(std::string name, Move* move)
+    : name(name), move(move){}
 
 
-// Player::Player(std::string name): name(name){}
+Player::Player(std::string name): name(name), move(nullptr){}
 
-// Player::Player():
-//     Player("", ""){}
+Player::Player():
+    Player("", nullptr){}
 
 Move* Player::makeMove(){return move;}
+
+// void Player::setMove(Move* move){
+//     this -> move = move;
+// }
 
 
 

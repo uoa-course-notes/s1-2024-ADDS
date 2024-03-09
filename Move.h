@@ -10,8 +10,8 @@ class Move{
 	    std::vector<std::string> loseRelationship; // given the move, which other moves will lose against it? 
 	public:	
 		// Returns the name of a Move instance, for example "Ninja"
-	 std::string getName();
-	 int compareMoves(Move* move); // self-referential pointer
+	 	std::string getName();
+	 	int compareMoves(Move* move); // self-referential pointer
 };
 
 

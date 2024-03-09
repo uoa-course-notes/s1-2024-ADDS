@@ -1,5 +1,5 @@
 main1: main.cpp
-	@g++ main.cpp Player.cpp Computer.cpp Human.cpp Referee.cpp Move.cpp Rock.cpp Pirate.cpp Zombie.cpp -o main
+	@g++ main.cpp Player.cpp Computer.cpp Human.cpp Referee.cpp Move.cpp Rock.cpp Paper.cpp Scissor.cpp Pirate.cpp Zombie.cpp Ninja.cpp -o main
 	@./main
 
 main2: main.cpp 
