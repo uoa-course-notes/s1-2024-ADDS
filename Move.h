@@ -5,13 +5,13 @@
 #include <vector>
 class Move{
 	protected:
-	    std::string name;
-	    std::vector<std::string> winRelationship;
-	    std::vector<std::string> loseRelationship;
+	    std::string name; // name of move
+	    std::vector<std::string> winRelationship; // given the move, which other moves will win against it? 
+	    std::vector<std::string> loseRelationship; // given the move, which other moves will lose against it? 
 	public:	
 		// Returns the name of a Move instance, for example "Ninja"
 	 std::string getName();
-	 int compareMoves(Move* move);
+	 int compareMoves(Move* move); // self-referential pointer
 };
 
 
