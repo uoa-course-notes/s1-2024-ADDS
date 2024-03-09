@@ -18,5 +18,3 @@ Move* Player::makeMove(){return move;}
 
 
 Player::~Player(){}
-
-

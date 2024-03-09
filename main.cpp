@@ -23,7 +23,7 @@ int main(int argc, char** argv){
     Player* player1 = new Human("Mei", move1);
     // if (player1 -> makeMove() == nullptr) player1 -> setMove(move1);
     
-    Move* move2 = new Pirate();
+    Move* move2 = new Robot();
     Player* player2 = new Human("Seth", move2);
     // if (player2 -> makeMove() == nullptr) player2 -> setMove(move2);
 
