@@ -1,0 +1,78 @@
+Hidden integration test: testing refGame with various combinations of Moves (0/0.33)
+Input: Rock Rock
+Expecting: John Human Computer Rock Rock Rock Rock
+Obtained : 
+We couldn't find the expected value in your output                   
+If you think this test should have passed, please speak to your tutor!
+
+
+unit test: testing makeMove and getName from Computers and Humans and getName from Move (0/0.5)
+Input: Zombie Ninja
+Expecting: John Human Computer Zombie Ninja Rock Rock
+Obtained : 
+We couldn't find the expected value in your output                    
+If you think this test should have passed, please speak to your tutor!
+
+Compilation check (0/0)
+integration test: testing refGame with various Player combinations (0/1)
+Input: Ninja Zombie Scissors Scissors
+Expecting: Tie Human Computer Computer
+Obtained : 
+We couldn't find the expected value in your output
+                    
+If you think this test should have passed, please speak to your tutor!
+Compilation check (0/0)
+Hidden integration test: testing refGame with various combinations of Moves (0/0.33)
+Input: Ninja Zombie
+Expecting: Ash
+Obtained : 
+We couldn't find the expected value in your output
+                    
+If you think this test should have passed, please speak to your tutor!
+Hidden integration test: testing refGame with various combinations of Moves (0/0.33)
+Input: Pirate Monkey
+Expecting: Ash
+Obtained : 
+We couldn't find the expected value in your output
+                    
+If you think this test should have passed, please speak to your tutor!
+Hidden integration test: testing refGame with various combinations of Moves (0/0.34)
+Input: Rock Paper
+Expecting: Slobian
+Obtained : 
+We couldn't find the expected value in your output
+                    
+If you think this test should have passed, please speak to your tutor!
+Ungraded
+Practical 2 - SOLID and ADT design
+Student
+Piseth Tang
+Total Points
+- / 6 pts
+
+Autograder Score
+0.0 / 3.0
+Failed Tests
+unit test: testing makeMove and getName from Computers and Humans and getName from Move (0/0.5)
+unit test: testing makeMove and getName from Computers and Humans and getName from Move (0/0.5)
+integration test: testing refGame with various Player combinations (0/1)
+Hidden integration test: testing refGame with various combinations of Moves (0/0.33)
+Hidden integration test: testing refGame with various combinations of Moves (0/0.33)
+Hidden integration test: testing refGame with various combinations of Moves (0/0.34)
+Passed Tests
+File check (0/0)
+Compilation check (0/0)
+Compilation check (0/0)
+Compilation check (0/0)
+Question 2
+Manual Assessment - ADT/SOLID
+3 pts
+
+
+Hi there. 
+
+I
+
+
+
+write a msg to Piazza
