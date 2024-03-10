@@ -12,6 +12,6 @@ int Reverser::reverseDigit(int value){
 
 
 std::string Reverser::reverseString(std::string characters){
-
+    if (characters == "") return "ERROR";
     return characters;
 }
