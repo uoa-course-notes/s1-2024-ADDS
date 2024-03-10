@@ -13,4 +13,4 @@ git add .
 git commit -m "$1"
 
 # Push to the remote branch practical_2
-git push origin practical_2
+git push origin practical_3
