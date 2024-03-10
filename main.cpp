@@ -34,17 +34,24 @@ int main(int argc, char** argv){
     Referee referee;
     Player* result = referee.refGame(player1,player2);
     
-
-    
-    
     // ===========================Let the game commence!============================================
-    if (result != nullptr){
-        // it shall return either a pointer to player1 or to player2
-        if (result -> getName() == player1 -> getName()) std::cout << player1 -> getName() << " Wins." << std::endl;
-        else std::cout << player2 -> getName() << " Wins." << std::endl;
-    }
-    else std::cout << "It's a Tie.\n";
+    /*std::cout << "============Welcome to Rock-Paper-Scissor-Monkey-Robot-Zombie-Ninja-Pirate Game=================" << std::endl;
+    int numPlayers = 0;
+    std::cout << "Enter the number of players:";
+    std::cin >> numPlayers;
 
+    if (numPlayers >= 2){
+        Player** players = new Player*[numPlayers];
+        if (result != nullptr){
+            // it shall return either a pointer to player1 or to player2
+            if (result -> getName() == player1 -> getName()) std::cout << player1 -> getName() << " Wins." << std::endl;
+            else std::cout << player2 -> getName() << " Wins." << std::endl;
+        }
+        else std::cout << "It's a Tie.\n";
+
+    }
+    else std::cout << "There should at least be 2 players within the game." << std::endl;
+*/
 
 
     

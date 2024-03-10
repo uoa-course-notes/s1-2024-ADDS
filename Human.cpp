@@ -10,7 +10,7 @@ Human::Human()
     :Player("Human", nullptr){}
 
 Move* Human::makeMove(){
-    // std::cout << "Enter move: ";
+    // std::cout << "Enter move: ";L
     
     // this -> move = move;
     return move;
