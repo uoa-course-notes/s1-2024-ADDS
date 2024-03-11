@@ -11,8 +11,8 @@ Player::Player():
     Player("", nullptr){}
 
 Move* Player::makeMove(){
-    // std::cout << "-------------" << this -> name << "'s turn----------------" << std::endl; 
-    // std::cout  << "Enter move: ";
+    std::cout << "-------------" << this -> name << "'s turn----------------" << std::endl; 
+    std::cout  << "Enter move: ";
     std::string input;
     std::cin >> input;
     

@@ -1,11 +1,17 @@
 #include "Computer.h"
 
-Computer::Computer(std::string name, Move* move): Player(name, move){}
+Computer::Computer(std::string name, Move* move): 
+    Player(name, move){}
 
-Computer::Computer(): Computer("Computer", nullptr){}
+Computer::Computer(std::string name): Player(name){}
+
+
+Computer::Computer(): Player("Computer", nullptr){}
+
+
 
 std::string Computer::getName(){return name;}
-Move* Computer::makeMove(){return move;}
+Move* Computer::makeMove(){return Player::makeMove();}
 
 Computer::~Computer(){}
 

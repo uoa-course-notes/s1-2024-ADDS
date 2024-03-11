@@ -26,7 +26,8 @@ int main(int argc, char** argv){
     // if (player1 -> makeMove() == nullptr) player1 -> setMove(move1);
     // Move* move1 = player1 -> makeMove();
 
-    Player* player2 = new Human("Seth");
+    // Player* player2 = new Human("Seth");
+    Player* player2 = new Computer();
     // Move* move2 = player2 -> makeMove();
 
     // if (player2 -> makeMove() == nullptr) player2 -> setMove(move2);

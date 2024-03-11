@@ -1,8 +1,7 @@
 #include "Human.h"
 
 Human::Human(std::string name, Move* move)
-    : Player(name, move)
-{}
+    :Player(name, move){}
 
 Human::Human(std::string name): Player(name){}
 
