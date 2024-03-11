@@ -5,7 +5,7 @@
 // #include "Move.h"
 #include "Rock.h"
 #include "Paper.h"
-#include "Scissor.h"
+#include "Scissors.h"
 #include "Monkey.h"
 #include "Robot.h"
 #include "Ninja.h"

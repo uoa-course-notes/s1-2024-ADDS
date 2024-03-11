@@ -4,10 +4,10 @@
 
 
 
-class Scissor: public Move{
+class Scissors: public Move{
     public:
-    Scissor();
-    ~Scissor();
+    Scissors();
+    ~Scissors();
 };
 
 

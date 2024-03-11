@@ -1,10 +1,9 @@
 #include "MoveFactory.h"
-#include "Scissor.h"
 
 
 Move* moveFactory::createMove(const std::string& moveName){
     if (moveName == "Rock") return new Rock();
-    else if (moveName == "Scissor") return new Scissor();
+    else if (moveName == "Scissors") return new Scissors();
     else if (moveName == "Paper") return new Paper();
     else if (moveName == "Monkey") return new Monkey();
     else if (moveName == "Robot") return new Robot();

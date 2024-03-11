@@ -1,6 +1,6 @@
-#include"Scissor.h"
+#include"Scissors.h"
 
-Scissor::Scissor(){
+Scissors::Scissors(){
     this->name = "Scissor";
     // winRelationship is a vector that stores a collection of moves that win against Scissor
     this->winRelationship.push_back("Rock");
@@ -9,4 +9,4 @@ Scissor::Scissor(){
     this->loseRelationship.push_back("Paper");
 }
 
-Scissor::~Scissor(){}
+Scissors::~Scissors(){}

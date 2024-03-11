@@ -5,16 +5,16 @@
 #include "Referee.h"
 
 // Include the classic RSP
-#include "Rock.h"
-#include "Scissor.h"
-#include "Paper.h"
+// #include "Rock.h"
+// #include "Scissor.h"
+// #include "Paper.h"
 
-// Include additional moves
-#include "Ninja.h"
-#include "Robot.h"
-#include "Pirate.h"
-#include "Zombie.h"
-#include "Monkey.h"
+// // Include additional moves
+// #include "Ninja.h"
+// #include "Robot.h"
+// #include "Pirate.h"
+// #include "Zombie.h"
+// #include "Monkey.h"
 
 // void game(){
 
