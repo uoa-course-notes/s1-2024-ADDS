@@ -11,7 +11,7 @@ Computer::Computer(): Player("Computer", nullptr){}
 
 
 std::string Computer::getName(){return name;}
-Move* Computer::makeMove(){return Player::makeMove();}
+Move* Computer::makeMove(){return new Rock();}
 
 Computer::~Computer(){}
 
