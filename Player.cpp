@@ -24,7 +24,7 @@ Move* Player::makeMove(){
         // when move is a nullptr or an invalid one
         while (move == nullptr){
         // std::cout << "Invalid move." << std::endl;
-            std::cout << "Invalid Move! Enter a valid move: ";
+            // std::cout << "Invalid Move! Enter a valid move: ";
             std::cin >> input;
             move = moveFactory::createMove(input);
         }
