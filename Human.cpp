@@ -10,12 +10,15 @@ Human::Human()
     :Player("Human", nullptr){}
 
 Move* Human::makeMove(){
-    // std::cout << "Enter move: ";L
-    
-    // this -> move = move;
-    return move;
     // std::cout << "Enter move: ";
-    // std::cin >> move;
+    // std::string input;
+    // create a move method such that 
+    // if new moves are added into the game in the future, 
+    // makeMove() method shouldn't need to be modified
+    // this -> move = move;
+    // return move;
+    return Player::makeMove(); // this is not common but should still do the work
+    // Human doesn't need to override Player's make move because they work exactly the same way
 }
 
 // void Human::setMove(char move){

@@ -1,7 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Move.h"
+#include "MoveFactory.h"
+
 
 class Player{
     protected:
@@ -16,8 +17,6 @@ class Player{
         virtual Move* makeMove();
         // virtual void setMove(Move* move);
         virtual ~Player() = 0;
-
-
 
 };
 

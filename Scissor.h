@@ -5,6 +5,7 @@
 
 
 class Scissor: public Move{
+    public:
     Scissor();
     ~Scissor();
 };
