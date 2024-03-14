@@ -2,8 +2,8 @@
 
 
 int Reverser::reverseDigit(int value){
-    if (value < 0) return -1;
     
+    if (value < 0) return -1;
     
     return value;
 }
@@ -12,7 +12,7 @@ int Reverser::reverseDigit(int value){
 
 std::string Reverser::reverseString(std::string characters){
     if (characters == "") return "ERROR";
-
-
-    return characters;
+    if (characters.size() == 1) return characters;
+    else return characters[characters.size()-1] + reverseString(characters.substr(0, characters.size()-1));
+    // return characters;
 }

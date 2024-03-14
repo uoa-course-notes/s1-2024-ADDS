@@ -1,18 +1,10 @@
 #include <iostream>
+#include <string>
 #include "Reverser.h"
 #include "Truckloads.h"
 #include "EfficientTruckloads.h"
 
-// void iterative_reverse(int& digits){
-//     digits = digits + 1;
-//     // return digits;
-    
-// }
-
-
-// void reverseString(std::string characters){
-//     if 
-// }
+// #include <typeinfo>
 
 // int numberTrucks(int numCrates, int loadSize){
 //     // if the number of crates reaches the size of the load per (one) truck, return it 
@@ -37,7 +29,12 @@
 //     }
 // }
 
-
+// std::string reverseString(std::string characters){
+//     if (characters == "") return "ERROR";
+//     if (characters.size() == 1) return characters;
+//     else return characters[characters.size()-1] + reverseString(characters.substr(0, characters.size()-1));
+//     // return characters;
+// }
 
 int main(){ 
     // Reverser r;
@@ -69,12 +66,16 @@ int main(){
     
     std::string s = "avalanche";
     int size = s.size();
-    // std::cout << s[size-1] << std::endl;
-    std::string sub = s.substr(0,size); // from 0 to size-1
-    std::cout << sub << std::endl;    
+    Reverser r;
+    std::cout << r.reverseString(s) << std::endl;
+    // std::cout << reverseString(s) << std::endl;
+    
+    // std::string sub = s.substr(0,size); // from 0 to size-1
+    // std::cout << sub << std::endl;    
+    
+   
 
-
-
+    
 
     return 0;
 }
