@@ -1,3 +1,8 @@
 main1: main.cpp
-	@g++ main.cpp Reverser.cpp Truckloads.cpp -o main
-	@./main
+	@g++ main.cpp Truckloads.cpp EfficientTruckloads.cpp -o main1
+	@./main1
+
+
+main2: main.cpp
+	@g++ main.pp Reverser.cpp -o main2
+	@./main2
