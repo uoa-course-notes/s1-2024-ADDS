@@ -1,88 +1,47 @@
 #include <iostream>
+#include <time.h>
 
 
-int f(int n){
-	if (n < 0) return -1;
-	else{
-		if (n == 1) return 1;
-		else return n*f(n-1);
+int* gen_array(int size){
+	int* A = new int[size]();
+	for (int i = 0; i < size; i++){
+		A[i] = rand() % (size + 1); // generate an element from 0 to size - 1
 	}
+	return A;
 }
 
-std::string rec_reverse_string(){
-	//if 
-	return "std";
+int Rec_fact(int n){
+	if (n == 0 | n == 1) return 1;
+	else return n * Rec_fact(n-1);
 }
 
-template <class T>
-void swap(T *a, T* b){
-	// a = 10, b = 5
-	T temp = *a; // temp = 10
-	*a = *b; // a = 5
-	*b = temp; // b = 10
-}
-
-template <class T>
-void swap(T& a, T& b){
-	// a = 10, b = 5
-	T temp = a; // temp = 10
-	a = b; // a = 5
-	b = temp; // b = 10
-}
-
-void it_reverse_string(std::string &input){ // for string of odd length
-	int mid = int(input.size()/2);
-	std::cout << input << ", length = " << input.size() << " and mid = " << mid << std::endl;	
-    for (int i = 0; i<=mid; i++){
-		swap(input[mid-i], input[mid + i]);
-		std::cout << "Swapped ("<< mid-i << "," << mid+i << ") --> " << input << std::endl;	
+int Int_fact(int n){
+	int product = 1;
+	for (int i = 1; i <= n; i++) {
+		product = product * i;
+		// product++;
 	}
+	return product;
 }
 
-void it_even_reverse_string(std::string &input){ // for string of odd length
-	int mid = int(input.size()/2);
-	std::cout << input << ", length = " << input.size() << " and mid = " << mid << std::endl;	
-    // // for (int i = 0; i<mid; i++){
-	// 	int i = mid;
-	// 	while (i > 0){
-	// 		i = mid - i;
-	// 		swap(input[mid-i-1], input[mid + i-1]);
-	// 		std::cout << "Swapped ("<< mid-i << "," << mid+i << ") --> " << input << std::endl;	
-	// 		i++;
-	// 	}
-	
-
-
-	// }
-}
-
-
-bool checkPalindrome(std::string& input){
-	int mid = int(input.size()/2);
-	if (mid < 0) return false; // input can't be of length smaller than 0
-	for (int i = 0; i< mid; i++){
-		if (input[mid-1-i] != input[mid+1+i]) return false;
-	}
-	return true; // either the input is of length 1 or greater than 1
-}
-
-
-int F(int n){
-	if (n == 1) return 0;
-	else{
-	    std::cout <<"Current n = " << n << std::endl;
-	    return (n*(n-1) + F(n-1));
+void printArray(int *A, int n){
+	for(int i=0; i<n; i++){
+		if (i == n-1) std::cout << A[i] << std::endl;
+		else std::cout << A[i] << ",";
 	}
 }
 
 
 int main(int argc, char** argv){
-	// std::cout << F(n) << std::endl;
-	std::string a = "abcd";
-	std::string b = "abcde";
-	it_even_reverse_string(a);
-	std::cout << "After: " << a << std::endl;
-	
-	
-	return 0;	
+	srand(time(nullptr));
+
+	int n = 10;
+	std::cout << Rec_fact(n) << std::endl;
+	std::cout << Int_fact(n) << std::endl;
+
+	int* C = gen_array(n);
+	printArray(C, n);
+
+	delete[] C;		
+	return 0;
 }
