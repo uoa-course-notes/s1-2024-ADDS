@@ -1,7 +1,7 @@
 #include "Truckloads.h"
 
 
-int TruckLoads::numTrucks(int numCrates, int numLoads){
+int Truckloads::numTrucks(int numCrates, int numLoads){
     if (numCrates <= numLoads) return 1;
     else {
         if (numCrates % 2 == 0){

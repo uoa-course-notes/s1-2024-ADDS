@@ -54,7 +54,7 @@ int main(){
 
     int n1 = 1024;
     int n2 = 5;
-    TruckLoads T;
+    Truckloads T;
     int trucks = T.numTrucks(n1, n2);
     std::cout << "Number of trucks: " << trucks << std::endl;
     
