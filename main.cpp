@@ -9,6 +9,11 @@
     
 // }
 
+
+// void reverseString(std::string characters){
+//     if 
+// }
+
 // int numberTrucks(int numCrates, int loadSize){
 //     // if the number of crates reaches the size of the load per (one) truck, return it 
 //     // if (numCrates <= loadSize) return 1;
@@ -52,12 +57,24 @@ int main(){
     // }
     // else std::cout << x/2 << ", " << x/2 <<  std::endl;
 
-    int n1 = 1024;
-    int n2 = 5;
-    Truckloads T;
-    int trucks = T.numTrucks(n1, n2);
-    std::cout << "Number of trucks: " << trucks << std::endl;
+    // ==========================Problem 1=============================
+    // int n1 = 1024;
+    // int n2 = 5;
+    // Truckloads T;
+    // int trucks = T.numTrucks(n1, n2);
+    // std::cout << "Number of trucks: " << trucks << std::endl;
     
     
+    // ===========================Problem 2============================
+    
+    std::string s = "avalanche";
+    int size = s.size();
+    // std::cout << s[size-1] << std::endl;
+    std::string sub = s.substr(0,size); // from 0 to size-1
+    std::cout << sub << std::endl;    
+
+
+
+
     return 0;
 }

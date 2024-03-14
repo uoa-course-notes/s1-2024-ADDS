@@ -1,7 +1,6 @@
 #ifndef REVERSER_H
 #define REVERSER_H
 
-#include <stdexcept>
 #include <string>
 
 
