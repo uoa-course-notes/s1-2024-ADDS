@@ -11,17 +11,39 @@
 //     return value;
 // }
 
-int Reverser::reverseDigit(int value){
+// int helper(int n, int acc = 0){
+//     if (n < 0) return -1;
+//     int rev = 0;
+//     int last_digit = 0;
+//     if (n < 10) return n;
+//     else{
+//         last_digit = n % 10;
+        
+//     }
+// }
+int helper(int value, int rev = 0){
+    // if (value < 0) return -1;
+    // int reversed = 0;
+    // int lastDigit = 0;
+    // while (value != 0){
+    //     lastDigit = value % 10;
+    //     reversed = reversed * 10 + lastDigit; 
+    //     value = value / 10;
+    // }
+    // return helper(value);
     if (value < 0) return -1;
-    int reversed = 0;
-    int lastDigit = 0;
-    while (value != 0){
-        lastDigit = value % 10;
-        reversed = reversed * 10 + lastDigit; 
-        value = value / 10;
+    else{
+        if (value < 10) return rev * 10 + value; // 1
+        int last_digit = value % 10;
+        return helper(value/10, rev*10 + last_digit);
     }
-    return reversed;
 }
+int Reverser::reverseDigit(int value){
+    return helper(value);
+}
+
+
+
 
 std::string Reverser::reverseString(std::string characters){
     if (characters == "") return "ERROR";

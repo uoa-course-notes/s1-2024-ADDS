@@ -39,16 +39,16 @@
 //     // return characters;
 // }
 
-// int reverse_digit_iterative(int n){   
-//     int reversed = 0;
-//     int lastDigit = 0;
-//     while (n != 0){
-//         lastDigit = n % 10;
-//         reversed = reversed * 10 + lastDigit; 
-//         n = n / 10;
-//     }
-//     return reversed;
-// }
+int reverse_digit_iterative(int n){   
+    int reversed = 0;
+    int lastDigit = 0;
+    while (n != 0){
+        lastDigit = n % 10;
+        reversed = reversed * 10 + lastDigit; 
+        n = n / 10;
+    }
+    return reversed;
+}
 
 
 // int reverseNumber(int number) {
@@ -68,6 +68,45 @@
 //     return reversedNumber;
 
 // }
+// int rev = 0;
+
+// int reverse_integer(int value, int rev = 0) {
+//     int last_digit = 0;
+//     if (value < 10) { // or value = 0
+//         return rev* 10 + value;
+//     }
+//     else{
+//     last_digit = value % 10;
+//     return reverse_integer(value/10, rev * 10 + last_digit);
+//     }
+// }
+
+// int reverse_integer_recursive(int value, int reversed) {
+//     // Base case: If the value has only one digit or is zero
+//     if (value >= -9 && value <= 9) {
+//         return reversed * 10 + value;
+//     }
+
+//     // Extract the last digit
+//     int last_digit = value % 10;
+
+//     // Recursive call to reverse the remaining digits
+//     return reverse_integer_recursive(value / 10, reversed * 10 + last_digit);
+// }
+
+// // Global function to reverse an integer
+// int reverse_integer(int value) {
+//     // Handle negative numbers separately
+//     if (value < 0) {
+//         // For negative numbers, reverse the absolute value and negate the result
+//         return -reverse_integer_recursive(-value, 0);
+//     } else {
+//         // For non-negative numbers, call the helper function directly
+//         return reverse_integer_recursive(value, 0);
+//     }
+// }
+
+
 
 int main(){ 
     // Reverser r;
@@ -106,7 +145,7 @@ int main(){
     // std::string s = "123456";
     // int t = std::stoi(s);
 
-    int x = 1482;
+    int x = 1482000;
     // std::cout << x/10 << std::endl; // find the quotient
     // std::cout << t+1 << std::endl;
     // std::cout << x % 1 << std::endl; 0
