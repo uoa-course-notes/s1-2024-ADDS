@@ -12,6 +12,7 @@
 // }
 
 int Reverser::reverseDigit(int value){
+    if (value < 0) return -1;
     int reversed = 0;
     int lastDigit = 0;
     while (value != 0){
