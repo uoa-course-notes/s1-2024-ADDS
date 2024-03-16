@@ -4,7 +4,7 @@
 #include "Reverser.h"
 #include "Truckloads.h"
 #include "EfficientTruckloads.h"
-#include <cmath>
+// #include <cmath>
 
 
 // #include <typeinfo>
@@ -39,33 +39,35 @@
 //     // return characters;
 // }
 
-int reverse_digit(int n){   
-    if (n == 0) return 0;
-    int lastDigit = n % 10;
-    // int remainingNumber = n / 10;
-    // std::cout << lastDigit << std::endl;
-    // int rev_remaining = lastDigit*10 + reverse_digit(remainingNumber);       
-    return (reverse_digit(n/10) * 10) + lastDigit;
-}
+// int reverse_digit_iterative(int n){   
+//     int reversed = 0;
+//     int lastDigit = 0;
+//     while (n != 0){
+//         lastDigit = n % 10;
+//         reversed = reversed * 10 + lastDigit; 
+//         n = n / 10;
+//     }
+//     return reversed;
+// }
 
 
-int reverseNumber(int number) {
-    // Base case: when the number becomes zero, return
-    if (number == 0) {
-        return 0;
-    }
+// int reverseNumber(int number) {
+//     // Base case: when the number becomes zero, return
+//     if (number == 0) {
+//         return 0;
+//     }
     
-    // Extract the last digit of the number
-    int lastDigit = number % 10;
-    // Remove the last digit from the number
-    int remainingNumber = number / 10;
-    // Recur with the remaining digits
-    int reversedRemaining = reverseNumber(remainingNumber);
-    // Append the last digit to the reversed remaining number
-    int reversedNumber = reversedRemaining * 10 + lastDigit;
-    return reversedNumber;
+//     // Extract the last digit of the number
+//     int lastDigit = number % 10;
+//     // Remove the last digit from the number
+//     int remainingNumber = number / 10;
+//     // Recur with the remaining digits
+//     int reversedRemaining = reverseNumber(remainingNumber);
+//     // Append the last digit to the reversed remaining number
+//     int reversedNumber = reversedRemaining * 10 + lastDigit;
+//     return reversedNumber;
 
-}
+// }
 
 int main(){ 
     // Reverser r;
@@ -101,8 +103,8 @@ int main(){
     // std::cout << r.reverseString(s) << std::endl;
     
     // ===========================Problem 3============================
-    std::string s = "123456";
-    int t = std::stoi(s);
+    // std::string s = "123456";
+    // int t = std::stoi(s);
 
     int x = 1482;
     // std::cout << x/10 << std::endl; // find the quotient
@@ -113,28 +115,12 @@ int main(){
     // std::cout << x % 1000 << std::endl; 482
     // std::cout << x % 10000 << std::endl; 1482
     // std::cout << x % 100000 << std::endl; 1482
-
-    int a = 10;
-    int k = x;
     std::cout << x << std::endl;
-    int reversed = reverseNumber(x);
+    Reverser r;
+    int reversed = r.reverseDigit(x);
     std::cout << reversed << std::endl;
     
     
-    // while(true){
-    //     std::cout << x % a << std::endl;
-    //     if (x % a == k) break;
-    //     a = a*10;
-    // }
-    // int rev_num = 0;
-    // int rem = 0;
-    // int quotient = 0;
-    // while (x != 0){
-    //     rem = x % 10;
-    //     rev_num = rev_num * 10 + rem;
-    //     x = x / 10;
-    // }
-    // std::cout << rev_num << std::endl;
     
     
     
