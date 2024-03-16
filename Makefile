@@ -4,5 +4,5 @@ main1: main.cpp
 
 
 main2: main.cpp
-	@g++ main.cpp Reverser.cpp -o main3
-	@./main3
+	@g++ main.cpp Reverser.cpp -o main2
+	@./main2
