@@ -9,6 +9,11 @@ Stack::Stack(int val){
     S = new int[10]; // initialize an array of length 10
     // we will work on creating different cases.
     *(S+counter) = val;
+    
+    // there's an issue with adding an increment below
+    // Suppose a user uses the same constructor again and again, then
+    //  
+    counter++;
 }
 
 

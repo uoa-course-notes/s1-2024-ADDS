@@ -37,7 +37,10 @@ int main(int argc, char** argv){
     s.push(1202);
     s.print();
     std::cout << "Size: " << s.size() << std::endl;
+
     int a = s.size();
+
+    // Add 3 more elements 
     s.push(10000);
     s.push(10000);
     s.push(10000);
