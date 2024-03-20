@@ -70,16 +70,16 @@ int reverse_digit_iterative(int n){
 // }
 // int rev = 0;
 
-// int reverse_integer(int value, int rev = 0) {
-//     int last_digit = 0;
-//     if (value < 10) { // or value = 0
-//         return rev* 10 + value;
-//     }
-//     else{
-//     last_digit = value % 10;
-//     return reverse_integer(value/10, rev * 10 + last_digit);
-//     }
-// }
+int reverse_integer(int value, int rev = 0) {
+    int last_digit = 0;
+    if (value < 10) { // or value = 0
+        return rev* 10 + value;
+    }
+    else{
+    last_digit = value % 10;
+    return reverse_integer(value/10, rev * 10 + last_digit);
+    }
+}
 
 // int reverse_integer_recursive(int value, int reversed) {
 //     // Base case: If the value has only one digit or is zero
