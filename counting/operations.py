@@ -3,6 +3,16 @@ import matplotlib.pyplot as plt
 
 import random
 
+def LINEARITY(IN: list[int], OUT:list[int]):
+    # Using the defintion of linear mapping
+    # F(aX) = aF(X) for all X in IN and a, an arbitary real number
+    # F(X + Y) = F(X) + F(Y) for every elements X and Y in IN
+
+    # Using the definition of slope
+    # 
+    pass
+
+
 def gen_array(N: int) -> list[int]:
     A = []
     for _ in range(N):
@@ -27,7 +37,7 @@ size = 2
 key = 0
 INPUTS = []
 
-exp: int = 10000
+exp: int = 1000
 SUMS_ARRAY = []
 
 
@@ -40,7 +50,16 @@ for i in range(exp):
 
     
 # print(INPUTS, SUMS_ARRAY)        
-fig1, ax1 = plt.subplots() # Create a figure containing a single axes
-ax1.plot(INPUTS, SUMS_ARRAY) # Plot some data on axes
+x = np.linspace(0,2,100)
 
+fig1, ax1 = plt.subplots() # Create a figure containing a single axes
+# ax1.plot(INPUTS, SUMS_ARRAY) # Plot some data on axes
+ax1.scatter(INPUTS, SUMS_ARRAY, facecolor='C0', edgecolor='k')
+# ax1.plot(INPUTS,x,label="linear")
+# ax1.plot(INPUTS,x**2,label="quadratic")
+# ax1.plot(INPUTS,x**3,label="cubic")
+ax1.set_title("Linear Search Analysis")
+# ax1.legend() # Add a legend
+ax1.set_xlabel(f"Input Size ({INPUTS[0]} ----> {INPUTS[len(INPUTS) - 1]})")
+ax1.set_ylabel("Output Sums of elementary operations")
 plt.show()
