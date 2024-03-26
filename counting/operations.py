@@ -27,7 +27,7 @@ size = 2
 key = 0
 INPUTS = []
 
-exp: int = 100
+exp: int = 10000
 SUMS_ARRAY = []
 
 
@@ -36,7 +36,7 @@ for i in range(exp):
     size += 1
     X = gen_array(size)
     s = SUMS_ARRAY.append(LINEAR_SEARCH(X, key=X[size-1]))
-    print(f"Array #{i+1} -> {X} size = {size} --> #ops = {SUMS_ARRAY[i]}")
+    # print(f"Array #{i+1} -> {X} size = {size} --> #ops = {SUMS_ARRAY[i]}")
 
     
 # print(INPUTS, SUMS_ARRAY)        
