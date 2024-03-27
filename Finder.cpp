@@ -16,3 +16,12 @@ std::vector<int> Finder::findSubstrings(std::string s1, std::string s2){
 
 
 
+/*
+Algorithm Can the algorithm be optimized?
+1. Find operations that are performed several times.
+2. Try to avoid them. Hint: s1.find(s2, index) can find substrings starting from index.
+3. If prefix was not found (-1 as an output), the larger prefix will not be found either.
+4. What will be the time complexity of the optimized algorithm?
+
+
+*/
