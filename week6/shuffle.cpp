@@ -170,23 +170,40 @@ void INSERTION_SORT(int* A, int N){
 }
 
 
+// I still don't understand this algorithm...
+void INSERTION_CLSR(int* A, int N){
+    int key = 0;
+    for(int i=1; i<N; i++){
+        key = A[i];
+        int j = i;
+        while (j >= 0 && A[j] > key){
+            swap(A[j], A[j-1]);
+            j--;
+        }
+        // A[j] = key;
+        // swap(A[j], key);
+    }
+}
+
+
+
 int main(int argc, char** argv){
     srand(time(nullptr));    
     int N = 10;
-    // int* A = generate_random_array(N);
+    int* A = generate_random_array(N);
     // std::cout << "Before shuffling" << std::endl;
     // int x = 0;
     // for (int i=0; i<10000; i++){
     //     int* A = generate_distinct_element_array(N);
     //     printArray(A, N);
     // }
-    int* A = generate_distinct_element_array(N);
-    printArray(A, N);
-    if (isDistinct(A,  N)) {
-        std::cout << "Distinct" << std::endl;
-        // x++;
-    }
-    else std::cout << "Not distinct" << std::endl;
+    // int* A = generate_distinct_element_array(N);
+    // printArray(A, N);
+    // if (isDistinct(A,  N)) {
+    //     std::cout << "Distinct" << std::endl;
+    //     // x++;
+    // }
+    // else std::cout << "Not distinct" << std::endl;
 
     // std::cout << "Out of " << 10000 << " randomly generated arrays, only " << x << " are disinct." << std::endl;
     
@@ -202,12 +219,16 @@ int main(int argc, char** argv){
     // printArray(A, N);
     // std::cout << "After sorting" << std::endl;
     // // INSERTION_SORT(A, N);
-    // SELECTION_SORT(A, N);
+    // INSERTION_CLSR(A, N);
+    // // SELECTION_SORT(A, N);
     // printArray(A, N);
     // if (isSorted(A, N)) std::cout << "Sorted!" << std::endl;
     // else std::cout << "No" << std::endl;
-    
-
+    int n = 1;
+    for (int i=1; i<n; i++){
+        std::cout << "hello" << std::endl;
+        
+    }
     // delete A;
     return 0;
 }

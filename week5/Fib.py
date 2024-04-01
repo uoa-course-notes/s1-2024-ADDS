@@ -6,7 +6,7 @@ import numpy as np
 
 def printArray(A: list[int]):
     for _ in range(len(A)):
-        print(A[_], sep=", ")
+        print(f"{_+1} : {A[_]}")
     print()
 
 def generate_fib(n: int, seed: int) -> list[int]:
@@ -29,13 +29,13 @@ def fib(n: int, s = 0) -> list[int]:
 # Generate 10 fibonacci numbers
 N: int = 100
 y_axis = fib(N, 0)
-# printArray(y_axis)
+printArray(y_axis)
 
 
-x_axis = np.arange(0, N, 1)
+# x_axis = np.arange(0, N, 1)
 
 
-fig, ax = plt.subplots()
-ax.plot(x_axis, y_axis)
-plt.show()
+# fig, ax = plt.subplots()
+# ax.plot(x_axis, y_axis)
+# plt.show()
 
