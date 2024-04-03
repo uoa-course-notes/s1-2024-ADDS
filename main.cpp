@@ -73,6 +73,8 @@ bool BINARY_SEARCH(
     // At this point, key is not in the list
     return false;
 }
+
+
 void swap(int&a, int& b){
     int temp = a;
     a = b;
