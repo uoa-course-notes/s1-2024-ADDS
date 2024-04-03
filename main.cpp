@@ -127,12 +127,12 @@ void INSERTION_SORT(std::vector<int> A){
     }
 }
 
-std::vector<int> convert_to_vector(std::string s){
-    return {};
-}
+// std::vector<int> convert_to_vector(std::string s){
+//     return {};
+// }
 
 int main(int argc, char** argv){
-    srand(time(nullptr));
+    // srand(time(nullptr));
     // std::cout << "How many command line arguments were there? " << argc << std::endl ;
     // std::cout << "And what are they? " << std::endl;
     // int i = 0;
@@ -179,15 +179,20 @@ int main(int argc, char** argv){
     // std::cout << "Before swapping: " << key << "," <<  x << std::endl;
     // std::swap(key,x);
     // std::cout << "After swapping: " << key << "," <<  x << std::endl;
-    int num = 0;
+    int num;
     // std::vector<int> list = generateRandom(size);
     std::vector<int> list;
+    std::cout << "Enter a number:" << std::endl;
+    
+    // int size = 0;
     while (std::cin >> num){
         list.push_back(num);
+        // size = array.size();
+        if (std::cin.eof()) break;
+        // std::cout << "Size: " << size << std::endl;
     }
 
-    int size = list.size();
-
+    
     // Sort String_formatted_array in ascending order using quick sort
     Sort* bubble_sort = new BubbleSort();
     // printVector(list);
