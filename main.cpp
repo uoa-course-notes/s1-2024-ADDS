@@ -182,7 +182,7 @@ int main(int argc, char** argv){
     int num;
     // std::vector<int> list = generateRandom(size);
     std::vector<int> list;
-    std::cout << "Enter a number:" << std::endl;
+    // std::cout << "Enter a number:" << std::endl;
     
     // int size = 0;
     while (std::cin >> num){
