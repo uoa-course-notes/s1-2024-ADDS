@@ -6,7 +6,11 @@
 class RecursiveBinarySearch{
     public:
         bool search(std::vector<int> list, int key);
-        bool BINARY_SEARCH(std::vector<int> list, int key, int begin, int end);
+        // bool BINARY_SEARCH(std::vector<int> list, int key, int begin, int end);
+        bool binarySearch(std::vector<int> array, int x, int low, int high);
+
+
+
 };
 
 
