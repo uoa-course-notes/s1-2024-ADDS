@@ -16,7 +16,7 @@ This class serves as the base class to be derived by other classes of sorting al
 
 class Sort{
     public:
-        virtual std::vector<int> sort(std::vector<int> list) = 0;
+        virtual std::vector<int> sort(std::vector<int>& list) = 0;
 
         // void swap(int& a, int& b){
         //     int temp = a;

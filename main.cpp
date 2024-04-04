@@ -195,26 +195,26 @@ int main(int argc, char** argv){
     // QUICK_SORT(int *A, int p, int r)
     
     // std::cout << "Fingers crossed \n";
-    // Sort* bubble_sort = new BubbleSort;
-    // list = bubble_sort -> sort(list);
+    Sort* bubble_sort = new BubbleSort;
+    list = bubble_sort -> sort(list);
 
-    Sort* quick_sort = new QuickSort;
-    printVector(list);
-    list = quick_sort -> sort(list);
+    // Sort* quick_sort = new QuickSort;
+    // printVector(list);
+    // list = quick_sort -> sort(list);
     // std::cout << "Bubble sort works!\n";
-    printVector(list);
+    // printVector(list);
 
     // Use Binary search to determine whether 1 belongs to the list or not 
     
-    // RecursiveBinarySearch* searcher;
-    // int key = 1;
+    RecursiveBinarySearch* searcher;
+    int key = 1;
     // // std::cout << "Searching " << key << " in ";
     // // printVector(list);
-    // bool found = searcher -> search(list, key);
-    // // std::cout << "Binary search works..." << std::endl;
-    // if (found == true) std::cout << "true";
-    // else               std::cout << "false";
-    // std::cout << " ";
+    bool found = searcher -> search(list, key);
+    // std::cout << "Binary search works..." << std::endl;
+    if (found == true) std::cout << "true";
+    else               std::cout << "false";
+    std::cout << " ";
     
-    // printVector(list);    
+    printVector(list);    
 }

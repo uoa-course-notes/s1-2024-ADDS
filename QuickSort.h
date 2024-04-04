@@ -5,7 +5,7 @@
 
 class QuickSort: public Sort{
     public:
-        std::vector<int> sort(std::vector<int> list) override;
+        std::vector<int> sort(std::vector<int>& list) override;
 };
 
 
