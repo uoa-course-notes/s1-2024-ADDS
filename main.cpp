@@ -1,14 +1,21 @@
 #include "BubbleSort.h"
 #include "Sort.h"
-#include <exception>
+// #include <exception>
 // #include <stdexcept>
 #include <ctime>
 #include "RecursiveBinarySearch.h"
 #include "QuickSort.h"
+#include <sstream>
 
+int* generateRandomArray(int N){
+    int* A = new int[N];
+    for (int i=0; i<N; i++){
+        A[i] = rand() % (2*N+1) - N;
+    }
+    return A;
+}
 
-
-std::vector<int> generateRandom(int N){
+std::vector<int> generateRandomVector(int N){
     std::vector<int> V;
     for (int i=0; i < N; i++){
         V.push_back(rand() % (2*N+1) - N);
@@ -42,6 +49,16 @@ void print_value(char** A, int num){
     }
     std::cout << std::endl;
     
+}
+
+void printArray(int* A, int N){
+    std::cout << "<";
+    
+    for(int i=0; i<N; i++){
+        if (i == N-1) std::cout << A[i];
+        else std::cout << A[i] << ",";
+    }
+    std::cout << ">" << std::endl;
 }
 
 
@@ -82,6 +99,7 @@ void swap(int&a, int& b){
 }
 
 void BUBBLE_SORT(std::vector<int>& A){
+    if (A.size() < 1) return;
     int N  = A.size();
     for (int i=1; i<N; i++){
         for(int j=1; j<N; j++){
@@ -129,37 +147,40 @@ void INSERTION_SORT(std::vector<int> A){
     }
 }
 
+void PARTITION(int* A, int p, int r){
+
+}
+
+// void QUICK_SORT(int* A, int p, int r){
+//     if (p < r) {
+//         int q = PARTITION(A, p, r);
+//         QUICK_SORT(A, p, q-1); // recursively sort the low side
+//         QUICK_SORT(A, q+1, r); // recursively sort the high side 
+//     }
+// }
+
 // std::vector<int> convert_to_vector(std::string s){
 //     return {};
 // }
 
+
+// std::vector<int> getInput(){
+
+// }
+std::vector<int> getInput(std::string s){
+    std::string l;
+    std::stringstream T(s);
+    std::vector<int> list;
+    while (std::getline(T, l, ' ')){
+        // std::cout << l << " --> " << std::stoi(l) + 1 << std::endl;
+        list.push_back(std::stoi(l));
+    }
+    return list;
+}
+
+
 int main(int argc, char** argv){
     // srand(time(nullptr));
-    // std::cout << "How many command line arguments were there? " << argc << std::endl ;
-    // std::cout << "And what are they? " << std::endl;
-    // int i = 0;
-    // // std::string* A[10] = {};
-    // std::string x = "";
-    // print_value(argv, argc);
-    // std::cout << "Enter a string: ";
-    // while (std::cin >> x){
-    //     std::cout << "Enter a string: ";
-    //     // A[i++] = x;
-
-    //     // argv
-    // }
-    // char ** A = new char*[10];
-    // char* a1 = "hello";
-    // char* a2 = (char*) "hello1";
-    // char* a3 = (char*) "hello2";
-    // char* a4 = (char*) "hello3";
-    // // std::cout << a1 << std::endl;
-    // A[0] = a1;
-    // A[1] = a2;
-    // A[2] = a3;
-    // A[3] = a3;
-    // A[4] = a4;
-    // print_value(A,10);
     // std::cout << "Before sorting" << std::endl;
     // printVector(list);
     // std::cout << "After sorting" << std::endl;
@@ -174,61 +195,45 @@ int main(int argc, char** argv){
 
 
     // Get user input using getline instead...
-    int key = 1;
-    // std::string String_formatted_array;
+    std::string String_formatted_array;
     // std::getline(std::cin, String_formatted_array);
-    // int x = 2;
-    // std::cout << "Before swapping: " << key << "," <<  x << std::endl;
-    // std::swap(key,x);
-    // std::cout << "After swapping: " << key << "," <<  x << std::endl;
-    int num;
-    // std::vector<int> list = generateRandom(size);
-    std::vector<int> list;
-    // std::cout << "Enter a number:" << std::endl;
-    
+    // std::vector<int> list = getInput(String_formatted_array);
+    std::vector<int> list = {-5,-8,-4,-2,-1};
+    printVector(list);    
     // int size = 0;
-    while (std::cin >> num){
-        list.push_back(num);
-        // size = array.size();
-        if (std::cin.eof()) break;
-        // std::cout << "Size: " << size << std::endl;
-    }
-
-    
-    // Sort String_formatted_array in ascending order using quick sort
-    Sort* bubble_sort = new BubbleSort();
-    // printVector(list);
-    list = bubble_sort -> sort(list);
-    // int i = 0;
-    // while (i<100){
-    //     list = bubble_sort -> sort(list);
-    //     if (isSorted(list, size) != true) break;
-    //     else i++;
+    // while (std::cin >> num){
+    //     list.push_back(num);
+    //     // size = array.size();
+    //     // if (std::cin.eof()) break;
+    //     // std::cout << "Size: " << size << std::endl;
     // }
-
-    // if (i == 100) std::cout << "Bubble sort checks out!" << std::endl;
-    // else std::cout << "Something wrong with bubble sort" << std::endl;
-    // std::cout << i << std::endl;
+    // printVector(list);
+    // int* array = generateRandomArray(10);
+    // printArray(array, 10);
+    // =======================Sort String_formatted_array in ascending order using quick sort============================
+    // QUICK_SORT(int *A, int p, int r)
+    
+    // std::cout << "Fingers crossed \n";
+    Sort* bubble_sort = new BubbleSort;
+    list = bubble_sort -> sort(list);
+    std::cout << "Bubble sort works!\n";
+    // int x = list[list.size()-1];
+    // Use Binary search to determine whether 1 belongs to the list or not 
+    printVector(list);
+    std::cout << "Entering binary search..." << std::endl;
     
     RecursiveBinarySearch* searcher;
+    int key = 1;
+    std::cout << "Searching " << key << " in ";
+    printVector(list);
     bool found = searcher -> search(list, key);
+    std::cout << "Binary search works..." << std::endl;
     if (found == true) std::cout << "true";
     else               std::cout << "false";
     std::cout << " ";
     
     printVector(list);
-    // if (found != true) std::cout << "Nope" << std::endl;
-    // else std::cout << "Yes" << std::endl;
+
+    std::cout << "yes" << std::endl;
     
-
-
-    // Use Binary search to determine whether 1 belongs to the list or not 
-
-
-
-    // std::cout << "Hello " << String_formatted_array << std::endl; 
-
-
-    
-
 }
