@@ -200,7 +200,7 @@ int main(int argc, char** argv){
     // std::vector<int> list = getInput(String_formatted_array);
     // std::vector<int> list = {-3,21,3,21, 49, 1, 10, -1};
     std::vector<int> list = {-5,-8,-4,-2,-1};
-    printVector(list);    
+    // printVector(list);    
     // int size = 0;
     // while (std::cin >> num){
     //     list.push_back(num);
@@ -224,7 +224,7 @@ int main(int argc, char** argv){
     RecursiveBinarySearch* searcher;
     int key = 1;
     // std::cout << "Searching " << key << " in ";
-    printVector(list);
+    // printVector(list);
     bool found = searcher -> search(list, key);
     // std::cout << "Binary search works..." << std::endl;
     if (found == true) std::cout << "true";
