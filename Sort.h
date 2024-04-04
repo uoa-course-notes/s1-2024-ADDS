@@ -18,11 +18,11 @@ class Sort{
     public:
         virtual std::vector<int> sort(std::vector<int> list) = 0;
 
-        void swap(int& a, int& b){
-            int temp = a;
-            a = b;
-            b = temp;
-        }
+        // void swap(int& a, int& b){
+        //     int temp = a;
+        //     a = b;
+        //     b = temp;
+        // }
         
 };
 

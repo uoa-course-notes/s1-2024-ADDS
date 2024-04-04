@@ -9,11 +9,11 @@ int PARTITION(std::vector<int>& list, int p, int r){
     // int j = 0;
     for (int j=0; j<r; i++){
         if (list[j] < piv){
-            swap(list[j], list[i]);
+            std::swap(list[j], list[i]);
             i++;
         }
     }
-    swap(list[i+1], piv);
+    std::swap(list[i+1], piv);
     return i+1;
 }
 
@@ -24,6 +24,7 @@ std::vector<int> QS(std::vector<int>& list, int p, int r){
         QS(list, p, piv_pos-1);
         QS(list, piv_pos + 1, r);
     }
+    return list;
 }
 
 

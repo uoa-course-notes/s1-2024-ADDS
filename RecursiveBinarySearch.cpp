@@ -1,17 +1,6 @@
 #include "RecursiveBinarySearch.h"
 
 
-void printVector1(std::vector<int> V){
-    int N = V.size();
-    // std::cout << "<";
-    for (int i=0; i<N; i++){
-        if(i == N-1) std::cout << V[i];
-        else std::cout << V[i] << " ";
-    }
-    // std::cout << ">" << std::endl;
-    std::cout << std::endl;
-    
-}
 bool RecursiveBinarySearch::binarySearch(std::vector<int> array, int x, int low, int high) {
   if (high >= low) {
     int mid = low + (high - low) / 2;

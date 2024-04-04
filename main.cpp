@@ -92,46 +92,46 @@ bool BINARY_SEARCH(
 }
 
 
-void swap(int&a, int& b){
-    int temp = a;
-    a = b;
-    b = temp;
-}
+// void swap(int&a, int& b){
+//     int temp = a;
+//     a = b;
+//     b = temp;
+// }
 
-void BUBBLE_SORT(std::vector<int>& A){
-    if (A.size() < 1) return;
-    int N  = A.size();
-    for (int i=1; i<N; i++){
-        for(int j=1; j<N; j++){
-            if (A[j-1] > A[j]) swap(A[j], A[j-1]);
-            // if (A[j] > A[j+1]) swap(A[j], A[j-1]);
-        }
-    }
-}
+// void BUBBLE_SORT(std::vector<int>& A){
+//     if (A.size() < 1) return;
+//     int N  = A.size();
+//     for (int i=1; i<N; i++){
+//         for(int j=1; j<N; j++){
+//             if (A[j-1] > A[j]) swap(A[j], A[j-1]);
+//             // if (A[j] > A[j+1]) swap(A[j], A[j-1]);
+//         }
+//     }
+// }
 
-void RecursiveBubble(std::vector<int>& A, int k){
-    if (k==0) return;
-    else{
-        for (int i=1; i<k; i++){
-            if (A[i-1] > A[i]) swap(A[i-1], A[i]);
-        }
+// void RecursiveBubble(std::vector<int>& A, int k){
+//     if (k==0) return;
+//     else{
+//         for (int i=1; i<k; i++){
+//             if (A[i-1] > A[i]) swap(A[i-1], A[i]);
+//         }
 
-        RecursiveBubble(A, k-1);
-    }
-}
-// Check if the array is sorted correctly in ascending order. 
-bool isSorted(std::vector<int> list, int N){
-    // int N = list.size();
-    for(int i=1; i<N; i++){
-        if (list[i] < list[i-1]) return false;
-    }
-    return true;
-}
+//         RecursiveBubble(A, k-1);
+//     }
+// }
+// // Check if the array is sorted correctly in ascending order. 
+// bool isSorted(std::vector<int> list, int N){
+//     // int N = list.size();
+//     for(int i=1; i<N; i++){
+//         if (list[i] < list[i-1]) return false;
+//     }
+//     return true;
+// }
 
-void isSorted(std::vector<int> list){
-    if (isSorted(list, list.size()) == true) std::cout << "Sorted" << std::endl;   
-    else std::cout << "Not sorted" << std::endl;
-}
+// void isSorted(std::vector<int> list){
+//     if (isSorted(list, list.size()) == true) std::cout << "Sorted" << std::endl;   
+//     else std::cout << "Not sorted" << std::endl;
+// }
 
 void INSERTION_SORT(std::vector<int> A){
     int N = A.size();
@@ -147,26 +147,6 @@ void INSERTION_SORT(std::vector<int> A){
     }
 }
 
-void PARTITION(int* A, int p, int r){
-
-}
-
-// void QUICK_SORT(int* A, int p, int r){
-//     if (p < r) {
-//         int q = PARTITION(A, p, r);
-//         QUICK_SORT(A, p, q-1); // recursively sort the low side
-//         QUICK_SORT(A, q+1, r); // recursively sort the high side 
-//     }
-// }
-
-// std::vector<int> convert_to_vector(std::string s){
-//     return {};
-// }
-
-
-// std::vector<int> getInput(){
-
-// }
 std::vector<int> getInput(std::string s){
     std::string l;
     std::stringstream T(s);
@@ -196,10 +176,10 @@ int main(int argc, char** argv){
 
     // Get user input using getline instead...
     std::string String_formatted_array;
-    // std::getline(std::cin, String_formatted_array);
-    // std::vector<int> list = getInput(String_formatted_array);
+    std::getline(std::cin, String_formatted_array);
+    std::vector<int> list = getInput(String_formatted_array);
     // std::vector<int> list = {-3,21,3,21, 49, 1, 10, -1};
-    std::vector<int> list = {-5,-8,-4,-2,-1};
+    // std::vector<int> list = {-5,-8,-4,-2,-1};
     // printVector(list);    
     // int size = 0;
     // while (std::cin >> num){
