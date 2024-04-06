@@ -176,10 +176,10 @@ int main(int argc, char** argv){
 
     // Get user input using getline instead...
     std::string String_formatted_array;
-    std::getline(std::cin, String_formatted_array);
-    std::vector<int> list = getInput(String_formatted_array);
+    // std::getline(std::cin, String_formatted_array);
+    // std::vector<int> list = getInput(String_formatted_array);
     // std::vector<int> list = {-3,21,3,21, 49, 1, 10, -1};
-    // std::vector<int> list = {-5,-8,-4,-2,-1};
+    std::vector<int> list = {-5,-8,-4,-2,-1};
     // printVector(list);    
     // int size = 0;
     // while (std::cin >> num){
@@ -195,13 +195,13 @@ int main(int argc, char** argv){
     // QUICK_SORT(int *A, int p, int r)
     
     // std::cout << "Fingers crossed \n";
-    Sort* bubble_sort = new BubbleSort;
-    list = bubble_sort -> sort(list);
+    // Sort* bubble_sort = new BubbleSort;
+    // list = bubble_sort -> sort(list);
 
-    // Sort* quick_sort = new QuickSort;
+    Sort* quick_sort = new QuickSort;
     // printVector(list);
-    // list = quick_sort -> sort(list);
-    // std::cout << "Bubble sort works!\n";
+    list = quick_sort -> sort(list);
+    std::cout << "Quick sort works!\n";
     // printVector(list);
 
     // Use Binary search to determine whether 1 belongs to the list or not 
