@@ -124,13 +124,29 @@ unsigned long int BINARY_SEARCH(int* A, int N, int key, int begin, int end){
     }
 }
 
+bool homogeneous(int* A, int N){
+    int x = A[0];
+    for(int i=1; i<N; i++){
+        if (x != A[i]) return true;
+    }
+
+    return false;
+}
+
+
 bool isSorted(int* A, int N){
     if (N < 1) return false; // array must be at least of length 1
+    if (homogeneous(A, N) == false) return false;     
     for (int i=1; i<N; i++){
         if (A[i-1] > A[i]) return false;
     }
     return true;
+    
+
 }
+
+
+
 
 int MIN(int* A, int N){
     int min = A[0];
@@ -187,48 +203,48 @@ void INSERTION_CLSR(int* A, int N){
 
 
 
-int main(int argc, char** argv){
-    srand(time(nullptr));    
-    int N = 10;
-    int* A = generate_random_array(N);
-    // std::cout << "Before shuffling" << std::endl;
-    // int x = 0;
-    // for (int i=0; i<10000; i++){
-    //     int* A = generate_distinct_element_array(N);
-    //     printArray(A, N);
-    // }
-    // int* A = generate_distinct_element_array(N);
-    // printArray(A, N);
-    // if (isDistinct(A,  N)) {
-    //     std::cout << "Distinct" << std::endl;
-    //     // x++;
-    // }
-    // else std::cout << "Not distinct" << std::endl;
+// int main(int argc, char** argv){
+//     srand(time(nullptr));    
+//     int N = 10;
+//     int* A = generate_random_array(N);
+//     // std::cout << "Before shuffling" << std::endl;
+//     // int x = 0;
+//     // for (int i=0; i<10000; i++){
+//     //     int* A = generate_distinct_element_array(N);
+//     //     printArray(A, N);
+//     // }
+//     // int* A = generate_distinct_element_array(N);
+//     // printArray(A, N);
+//     // if (isDistinct(A,  N)) {
+//     //     std::cout << "Distinct" << std::endl;
+//     //     // x++;
+//     // }
+//     // else std::cout << "Not distinct" << std::endl;
 
-    // std::cout << "Out of " << 10000 << " randomly generated arrays, only " << x << " are disinct." << std::endl;
+//     // std::cout << "Out of " << 10000 << " randomly generated arrays, only " << x << " are disinct." << std::endl;
     
      
-    // printArray(A,  N);
-    // for (int i=0; i<10; i++){
-    //     std::cout << rand() % (2*10 + 1) - 10 << std::endl;   
-    // }
-    // shuffle(A, N);
-    // std::cout << "After shuffling" << std::endl;
+//     // printArray(A,  N);
+//     // for (int i=0; i<10; i++){
+//     //     std::cout << rand() % (2*10 + 1) - 10 << std::endl;   
+//     // }
+//     // shuffle(A, N);
+//     // std::cout << "After shuffling" << std::endl;
     
-    // std::cout << "Before sorting" << std::endl;
-    // printArray(A, N);
-    // std::cout << "After sorting" << std::endl;
-    // // INSERTION_SORT(A, N);
-    // INSERTION_CLSR(A, N);
-    // // SELECTION_SORT(A, N);
-    // printArray(A, N);
-    // if (isSorted(A, N)) std::cout << "Sorted!" << std::endl;
-    // else std::cout << "No" << std::endl;
-    int n = 1;
-    for (int i=1; i<n; i++){
-        std::cout << "hello" << std::endl;
+//     // std::cout << "Before sorting" << std::endl;
+//     // printArray(A, N);
+//     // std::cout << "After sorting" << std::endl;
+//     // // INSERTION_SORT(A, N);
+//     // INSERTION_CLSR(A, N);
+//     // // SELECTION_SORT(A, N);
+//     // printArray(A, N);
+//     // if (isSorted(A, N)) std::cout << "Sorted!" << std::endl;
+//     // else std::cout << "No" << std::endl;
+//     int n = 1;
+//     for (int i=1; i<n; i++){
+//         std::cout << "hello" << std::endl;
         
-    }
-    // delete A;
-    return 0;
-}
+//     }
+//     // delete A;
+//     return 0;
+// }
