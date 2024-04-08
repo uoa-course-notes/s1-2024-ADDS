@@ -4,13 +4,15 @@
 #include <ctime>
 #include <sys/types.h>
 
+#include <vector>
+
 // #include <conio.h>
 
 
-void printArray(int* A, int N){
+void printArray(int* A, int N, int start = 0){
     std::cout << "<";
     
-    for(int i=0; i<N; i++){
+    for(int i=start; i<N; i++){
         if (i==N-1) std::cout << A[i];
         else std::cout << A[i] << ",";
     }
@@ -148,42 +150,42 @@ bool isSorted(int* A, int N){
 
 
 
-int MIN(int* A, int N){
-    int min = A[0];
-    for (int i=1; i<N; i++){
+int MIN(int* A, int N, int start){
+    int min = A[start];
+    for (int i=start+1; i<N; i++){
         if (A[i] < min) min = A[i];
     }
     return min;
 }
 
-// bugs still unchecked 
-void SELECTION_SORT(int* A, int N){
-    if (N < 1) return;
-    int min = 0;
-    for (int i=0; i<N ;i++){
-        // min = MIN(A, N);
-        min = A[i+1];
-        // array slicing is very costly...use index-based algorithm instead
-        for (int j=i+1; j< N; j++){
-            if (A[j] < min) min = A[j];
-        }
-        swap(A[i], min);
-    }
-}
-// SELECTION SORT recursively...? 
+// // bugs still unchecked 
+// void SELECTION_SORT(int* A, int N){
+//     if (N < 1) return;
+//     int min = 0;
+//     for (int i=0; i<N ;i++){
+//         // min = MIN(A, N);
+//         min = A[i+1];
+//         // array slicing is very costly...use index-based algorithm instead
+//         for (int j=i+1; j< N; j++){
+//             if (A[j] < min) min = A[j];
+//         }
+//         swap(A[i], min);
+//     }
+// }
+// // SELECTION SORT recursively...? 
 
 
 
-void INSERTION_SORT(int* A, int N){
-    for (int i=1; i<N; i++){
-        int j = i;
-        while (A[j - 1] > A[j] && j >= 1){
-            swap(A[j], A[j-1]);
-            j--;
-        }
-    }
+// void INSERTION_SORT(int* A, int N){
+//     for (int i=1; i<N; i++){
+//         int j = i;
+//         while (A[j - 1] > A[j] && j >= 1){
+//             swap(A[j], A[j-1]);
+//             j--;
+//         }
+//     }
 
-}
+// }
 
 
 // I still don't understand this algorithm...
