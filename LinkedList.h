@@ -1,8 +1,12 @@
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 #include "Node.h"
-
-
+#include <iostream>
+#include <cctype>
+#include <cstddef>
+#include <string>
+#include <vector> 
+#include <limits>
 // Elements in the list are indexed from 1 to length 
 class LinkedList{
     private:
@@ -25,7 +29,7 @@ class LinkedList{
 
         // method that return pos's Node's data member variable .
         // If pos is out-of-bound, it should return std__numeric_limits<int> ::max().
-        int getPos(int pos);
+        int get(int pos);
 
         // searches the list for the first occurence of target, in the list and returns the index of 
         // where target is. If target does not exist in the list, return -1
