@@ -1,5 +1,5 @@
 // #include "LinkedList.h"
-// #include "BigNumCalc.h"
+#include "BigNumCalc.h"
 
 
 // std::vector<int> split_to_ints(std::string input, std::string valid){
@@ -50,6 +50,37 @@
 
 
 int main(void){
+        BigNumCalc calculator;
+        std::string input1 = "115364565";
+        std::string input2 = "146536475";
+        
+
+        // std::list<int> LA = big.buildBigNum(input1);
+        // std::list<int> LB = big.buildBigNum(input2);
+
+        // std::list<int> add_res = big.add(LA, LB);
+        // std::list<int> sub_res = big.sub(LA, LB);
+        // std::list<int> mul_res = big.mul(LA, LB);
+
+// Test addition
+    std::list<int> num1 = calculator.buildBigNum("1234567890");
+    std::list<int> num2 = calculator.buildBigNum("9876543210");
+    std::list<int> sum = calculator.add(num1, num2);
+    for (int digit : sum) {
+        std::cout << digit;
+    }
+    std::cout << std::endl;
+
+    // Test subtraction
+    num1 = calculator.buildBigNum("9876543210");
+    num2 = calculator.buildBigNum("1234567890");
+    std::list<int> diff = calculator.sub(num1, num2);
+    for (int digit : diff) {
+        std::cout << digit;
+    }
+    std::cout << std::endl;
+
+
 //     // Take in user inputs - this code addumes for a valid input
 //     std::string user_input;
 //     std::getline(std::cin, user_input);

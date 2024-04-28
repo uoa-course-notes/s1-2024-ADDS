@@ -2,6 +2,8 @@
 #define BIG_NUM_CAL_H
 #include <list>
 #include <string>
+#include <sstream>
+#include <iostream>
 
 /*
 Task: Create a very simplified big number calculator.
@@ -14,7 +16,6 @@ Assumptions: All inputs are positive integers.
 class BigNumCalc{
     public:
         BigNumCalc();
-        BigNumCalc(int x);
         ~BigNumCalc();
         
         // Creates a list representing the provided string 
