@@ -28,14 +28,14 @@ std::vector<int> split_to_ints(std::string input, std::string valid){
 
 
 
-void printV(std::vector<int> V){
-    std::cout << "<";
-    for (int i=0; i<V.size(); i++){
-        if (i == V.size() - 1) std::cout << V[i];
-        else std::cout << V[i] << ",";
-    }
-    std::cout << ">" << std::endl;
-}
+// void printV(std::vector<int> V){
+//     std::cout << "<";
+//     for (int i=0; i<V.size(); i++){
+//         if (i == V.size() - 1) std::cout << V[i];
+//         else std::cout << V[i] << ",";
+//     }
+//     std::cout << ">" << std::endl;
+// }
 
 
 void printA(int* array, int n){
@@ -68,7 +68,7 @@ int main(void){
     int array_size = numeric_inputs.size() - 2; // the last two digits are parameters into different Linked List's class methods. 
     // ==== input_array = <5,2,7,10>
     int* input_array = new int[array_size];
-    for (unsigned int i = 0; i< array_size; i++){
+    for (int i = 0; i< array_size; i++){
         input_array[i] = numeric_inputs[i];
     }
     // printA(input_array, array_size); works as expected 

@@ -18,7 +18,7 @@ LinkedList::LinkedList(): LinkedList(nullptr, 0){
 
 Node* LinkedList::traverseTo(unsigned int destinationPos){
     Node* curr = head;
-    int i = 0;
+    unsigned int i = 0;
     // int dest = destinationPos - 1;
     // std::cout << "Before dereferencing...\n";
     if (curr == nullptr) return nullptr;
@@ -150,7 +150,7 @@ int LinkedList::get(int pos){
 int LinkedList::search(int target){
     if (head == nullptr) return -1;
     
-    Node* curr = head;
+    // Node* curr = head;
     int x = 0;
     // while (curr -> getLink() != nullptr){
     //     if (curr -> getData() == target) break;
