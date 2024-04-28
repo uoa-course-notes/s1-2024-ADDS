@@ -154,3 +154,16 @@
 
 //     return 0;
 // }
+
+
+
+#include "BigNumCalc.h"
+
+
+int main(void){
+    BigNumCalc big;
+
+
+
+    return 0;
+}
