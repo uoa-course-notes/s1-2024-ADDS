@@ -125,7 +125,9 @@ bool LinkedList::deletePosition(int pos){
     // if successful, return true
     // else, return false 
     int pos_arg = pos - 1;
-    if (pos_arg < 0 || pos_arg > listSize-1) return false;
+
+    // used to be ||
+    if (pos_arg < 0 && pos_arg > listSize-1) return false;
     else{
         Node* prevNodeToBeDeleted = traverseTo(pos_arg-1);
         Node* curr = prevNodeToBeDeleted -> getLink();

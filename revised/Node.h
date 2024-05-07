@@ -1,26 +1,22 @@
-#ifndef NODE_H
-#define NODE_H
-
-
+#pragma once 
 
 class Node{
     private:
         int data;
         Node* link;
     public:
-        Node(int data, Node* link);
-        
         Node();
+        Node(int data, Node* link);
+        Node(int data);
 
         int getData();
         void setData(int data);
-        
+
+
         Node* getLink();
         void setLink(Node* link);
 
         ~Node();
+
+
 };
-
-
-
-#endif 
