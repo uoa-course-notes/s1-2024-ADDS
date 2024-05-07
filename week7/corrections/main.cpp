@@ -48,8 +48,98 @@ class SLL{ // Remember that the list is 0-indexing origin
             return getHead();
         }
 
+        Node* MAXIMUM(){
+            // Return the node pointer to the maximum element of the linked lis t
+            Node* curr = head;
+            if (isEmpty()) return nullptr;
+            else{
+                int max = 0;
+                while (curr != nullptr){
+                    if (curr -> getData() > max) max = curr -> getData();
+                    curr = curr -> getLink();
+                }
+                return curr;
+            }
+        }
+        Node* MINIMUM(){
+            // Return the node pointer to the maximum element of the linked lis t
+            Node* curr = head;
+            if (isEmpty()) return nullptr;
+            else{
+                int min = 0;
+                while (curr != nullptr){
+                    if (curr -> getData() < min) min = curr -> getData();
+                    curr = curr -> getLink();
+                }
+                return curr;
+            }
+        
+        }
+
+        void INSERT(int pos, int key){
+            Node* curr = head;
+            if (curr == nullptr) {
+                if (pos == 0) pushFront(key);
+                else if (pos == size-1) pushBack(key);
+                return;
+            }
+            else {
+                // non-empty list 
+                if (size == 1){
+                    head = new Node(key, curr -> getLink());
+                }
+                else{
+                    Node* prevNode = findKthNode(pos-1);
+                    Node* insertedNode = new Node(key, prevNode -> getLink());
+                    prevNode -> setLink(insertedNode);
+                }
+                ++size;
+                return;
+            }
+        }
+
+        void pushFront(int key){
+            head = new Node(key, head);
+            ++size;
+        }
+
+        void pushBack(int key){
+            Node* newLastNode = new Node(key, nullptr);
+            Node* currLastNode = getBack();
+            currLastNode -> setLink(newLastNode);
+            size++;
+        }
+
+        Node* SUCCESSOR(){
+            return nullptr;
+        }
+
+        Node* PREDECESSOR(){
+            return nullptr;
+
+        }
+
+
+        Node* SEARCH(int key){
+            Node* curr = head;
+            if (curr == nullptr) return nullptr;
+            else{
+                // List contains at least one element 
+                while (curr != nullptr){
+                    if (curr -> getData() == key) break;
+                    curr -> setLink(curr -> getLink());
+                }
+                return curr;
+            }
+        }
+
+
         Node* getBack(){
             return findKthNode(size-1);
+        }
+
+        void SORT(){
+
         }
 
 
@@ -156,6 +246,8 @@ int main(void){
     
     SLL list(elements, N);
     list.printList();
+    // Node* last = list.getBack();
+    // std::cout << last -> getData() << std::endl;
     // Node* target = list.findKthNode(4);
     // if (target == nullptr) std::cout << "The list is either empty or your provided index is greater than " << N << std::endl;
     // else std::cout << target -> getData() << std::endl; 
@@ -168,9 +260,11 @@ int main(void){
     // list.removeBack(); // 1
     // list.removeBack(); // 0
     
-    list.removeNode(N-1);
-
+    // list.removeNode(N-1);
+    list.pushBack(3893);
+    std::cout << list.getSize() << std::endl;
     list.printList();
+    // list.printList();
 
 
     return 0;
