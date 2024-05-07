@@ -3,7 +3,7 @@ Below is the study plan:
 
 
 
-- Implement Linked List from MyUni concepts.
+- Implement Linked List from MyUni concepts.(Done!!!)
 - Implement using the below:
     + Data structures and Algorithms 
         === Vector ADT and List 

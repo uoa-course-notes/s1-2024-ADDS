@@ -40,9 +40,11 @@ class staticArray{
         // This is comparatively the most complicated abstraction to implement as it requires some sophisticated understanding 
         // on indexing the correct allocated memory location. 
         void insertAt(int pos){ // remember that this is a 0-indexing origin data structure 
-            if (isEmpty()) return;
+            if (isFull()) return;
             else{
-                
+                // If the array is not full, we have to consider several cases below:
+                // Okay let's put this off for now. And implement linked list instead.
+            
             }
         }
         void prettyPrint(){
@@ -65,7 +67,11 @@ class staticArray{
             }
             return current;
         }
-
+        
+        bool isFull(){
+            if (iterator == capacity) return true;
+            else return false;
+        }
         int getIterator(){return iterator;}
         unsigned int getCapacity(){return capacity;}
             
@@ -78,7 +84,7 @@ class staticArray{
 
 
 int main(void){
-    staticArray array(10);
+    staticArray array(5);
     // std::cout << array.getCapacity() << std::endl;
     
     array.append(83);
@@ -91,8 +97,10 @@ int main(void){
     std::cout << array.getCurrentSize() << std::endl;
     array.append(-411);
     std::cout << array.getCurrentSize() << std::endl;
-
-	array.prettyPrint();
+    
+    // bool full = array.isFull(); iterator = capacity, although there's no element at the iterator's position but rest assured that the array is full 
+    // std::cout << full << std::endl;
+	// array.prettyPrint();
     
 
     // std::cout << array.getCapacity() << std::endl;
