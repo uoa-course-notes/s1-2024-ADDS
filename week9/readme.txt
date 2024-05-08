@@ -4,7 +4,7 @@ Without further ado, the study plan is as follows:
 - BST video concepts on MyUni 
 - Code implementations of BST from MyUni  (Computational complexity may be deferred until later on)
 - RBT video concepts on MyUni 
-- RBt implementations from MyUni (Computational complexity may be deferred until later on)
+- RBT implementations from MyUni (Computational complexity may be deferred until later on)
 
 
 
