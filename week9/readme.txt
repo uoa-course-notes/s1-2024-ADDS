@@ -1,11 +1,11 @@
 This is an interetsing subject but before I get on to the study plan laid out below, I have to finish the previous one on Stack & Queue first. 
 Without further ado, the study plan is as follows: 
 
-- BST video concepts on MyUni 
+- BST video concepts on MyUni (Done) 
 - Code implementations of BST from MyUni  (Computational complexity may be deferred until later on)
 - RBT video concepts on MyUni 
 - RBT implementations from MyUni (Computational complexity may be deferred until later on)
-
+- Trie (Watched on MyUni)
 
 
 + Additional resource: 

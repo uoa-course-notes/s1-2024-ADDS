@@ -1,5 +1,6 @@
 #ifndef NODE_H
 #define NODE_H
+#include <iostream>
 
 
 class Node{
@@ -17,8 +18,8 @@ class Node{
         void setLST(Node* link);
         void setRST(Node* link);
 
-        void getLST();
-        void getRST();
+        Node* getLST();
+        Node* getRST();
 
 
         ~Node();
