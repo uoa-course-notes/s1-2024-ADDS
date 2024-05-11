@@ -10,7 +10,7 @@ class Autocomplete{
         
 
         // Return the known words that start with partialWord
-        std::vector<std::string> getSuggestion(std::string partialWord);
+        std::vector<std::string> getSuggestions(std::string partialWord);
 
         // Add a word to the set of known words. 
         void insert(std::string word);

@@ -5,7 +5,7 @@ void Autocomplete::insert(std::string word){
     t.insert(word);
 }
 
-std::vector<std::string> Autocomplete::getSuggestion(std::string partialWord){
+std::vector<std::string> Autocomplete::getSuggestions(std::string partialWord){
     std::string prefix;
     std::vector<std::string> parent;
     Node* node = t.navigate(partialWord, prefix, parent);
