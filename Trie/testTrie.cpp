@@ -7,8 +7,6 @@
 struct trieNode{
     bool isEndOfWord; // is this a terminal node or is this a particular word? 
     trieNode* children[NUM_CHARS]; // look-up tables to not look at the list of children 
-
-
 };
 
 
@@ -19,9 +17,8 @@ trieNode* createNode(){
     for (int i=0; i < NUM_CHARS; i++){
         newNode -> children[i] = nullptr;
     }
-
+    
     newNode -> isEndOfWord = false; // not at the end of word by default 
-
     return newNode;
 };
 
