@@ -1,14 +1,16 @@
 #ifndef __AUTO_COMPLETE_H__
 #define __AUTO_COMPLETE_H__
-#include <vector>
-#include <string>
+#include "Trie.h"
 
 
 class Autocomplete{
+    private:
+        Trie t;
     public:
         
+
         // Return the known words that start with partialWord
-        std::vector<int> getSuggestion(std::string partialWord);
+        std::vector<std::string> getSuggestion(std::string partialWord);
 
         // Add a word to the set of known words. 
         void insert(std::string word);

@@ -1,12 +1,15 @@
 #ifndef PREFIX_MATCHER_H
 #define PREFIX_MATCHER_H
-#include <string>
+#include "Trie.h"
+
 
 class PrefixMatcher{
     private:
-
-
+        Trie t;
+        std::unordered_map<std::string, int> router_map;
     public:
+
+        
         // returns the router with the longest matching preifx
         // The argument is a string to ease the implementation
         // A binary number can also be used as an argument. 
