@@ -12,8 +12,6 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
         return router_map.find(parent.back()) -> second;
     }
     else return -1;
-
-    return 1;
 }
 
 
