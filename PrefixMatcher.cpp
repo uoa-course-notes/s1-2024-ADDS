@@ -16,6 +16,10 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
 
 
 
+std::unordered_map<std::string, int > PrefixMatcher::getMap(){
+    return router_map;
+}
+
 void PrefixMatcher::insert(std::string address, int routerNumber){
     t.insert(address);
     std::pair<std::string, int> t = {address, routerNumber};

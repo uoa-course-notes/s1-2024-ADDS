@@ -19,6 +19,10 @@ class PrefixMatcher{
         // Add a router address
         void insert(std::string address, int routerNumber);
 
+
+        // Get router map 
+        std::unordered_map<std::string, int> getMap();
+
         // Implementing Patricia Trie data structure as an optimization for Trie 
 
 

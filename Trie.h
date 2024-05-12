@@ -9,7 +9,7 @@ class Trie{
         Trie();
 
         void insert(std::string word);
-        Node* navigate(std::string word, std::string& prefix, std::vector<std::string> parents);
+        Node* navigate(std::string word, std::string& prefix, std::vector<std::string>& parents);
         void dfs(Node* node, std::string prefix, std::vector<std::string>& result);
 };
 
