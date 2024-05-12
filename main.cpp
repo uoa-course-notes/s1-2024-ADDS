@@ -1,7 +1,15 @@
 #include "Autocomplete.h"
 #include "PrefixMatcher.h"
-#include <algorithm>
 
+
+
+
+void printSuggestions(std::vector<std::string>& suggestions)
+{
+    for (const auto & a: suggestions){
+        std::cout << a << std::endl;
+    }
+}
 
 int main(int argc, char** argv){
     Autocomplete wordGen;
@@ -14,9 +22,15 @@ int main(int argc, char** argv){
     std::string typedWord = "ban";
     std::vector<std::string> suggestions = wordGen.getSuggestions(typedWord);
     
-    for (auto suggestion: suggestions){
-        std::cout << suggestion << std::endl;
-    }
+    // printSuggestions(suggestions);
 
+
+    PrefixMatcher pm;
+    std::string add1 = "1010101";
+    int rNumber1 = 1;
+    pm.insert(add1, rNumber1);
+    
+    std::string networdAddress = "10101010";
+    pm.selectRouter(networdAddress);
     return 0;
 }

@@ -2,7 +2,7 @@
 
 
 Node::Node(){
-
+    isEndWord = false;
 }
 
 

@@ -2,7 +2,9 @@
 
 
 
-Trie::Trie(){}
+Trie::Trie(){
+    root = new Node();
+}
 
 
 void Trie::insert(std::string word){
