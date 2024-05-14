@@ -1,5 +1,0 @@
-1. 23/April/2024
-This week wraps up on all the sorting algorithms we covered so far which comprises of 2 classes: non-distributive sorting algorithms and distributive ones where counting sort is actually analyzed and is found to give O(m+n) linear time complexity in the average case which is a feat worth noting but it does horribly against sparse arrays and the running time will depend on the "evenness" of the distribution of the data along with what sorting algorithm (insertion, merge-sort...etc) one uses to sort each bucket. Speaking of bucket, I still don't understand the algorithm which is not a desirable position to be in, to say the least. 
-
-
-
