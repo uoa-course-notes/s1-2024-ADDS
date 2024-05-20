@@ -3,7 +3,7 @@
 #include <string>
 
 
-class DocumentMerger{
+class DocumentManager{
     private:
 
     public:

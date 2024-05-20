@@ -1,8 +1,8 @@
-#include "DocumentMerger.cpp"
+#include "DocumentManager.h"
 
 
 int main(int argc, char** argv){
-    DocumentMerger dm;    
+        
 
 
     return 0;
