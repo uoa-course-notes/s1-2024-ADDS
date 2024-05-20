@@ -1,10 +1,26 @@
 #ifndef DOCUMENT_MERGER_H
 #define DOCUMENT_MERGER_H
+#include <unordered_map>
+#include <unordered_set>
 #include <string>
-
+#include <vector>
+#include <iostream>
 
 class DocumentManager{
     private:
+        struct Document {
+            std::string name;
+            int id;
+            int license_limit;
+            int current_borrowed;
+        };
+
+        std::unordered_map<std::string, int> name_to_id;
+        std::unordered_map<int, Document> documents;
+        std::unordered_set<int> patrons;
+        std::unordered_map<int, std::unordered_set<int>> borrowed_docs; // patronID -> set of docIDs
+        std::unordered_map<int, std::unordered_set<int>> document_borrowers; // docID -> set of patronIDs
+
 
     public:
         void addDocument(std::string name, int id, int license_limit);
