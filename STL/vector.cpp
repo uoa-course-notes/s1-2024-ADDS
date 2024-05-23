@@ -26,14 +26,19 @@ void print_data(std::vector<int> A){
     std::cout << ">" << std::endl;
 }
 
+bool f(int x, int y){
+    return x < y;
+} // comparision function 
+
+
 int main(int argc, char** agrv){
     srand(time(nullptr));
 
 
 
 
-    // std::vector<int> A = generate_data(10);
-    std::vector<int> A =  {-12,4,32, 21, 328, 218, 129,12};
+    std::vector<int> A = generate_data(10);
+    // std::vector<int> A =  {-12,4,32, 21, 328, 218, 129,12};
     sort(A.begin(), A.end());
     print_data(A);
 
@@ -45,11 +50,36 @@ int main(int argc, char** agrv){
 
     // Gives iterator to the first element that is greater than or equal to than 100 
     std::vector<int>::iterator it = std::lower_bound(A.begin(), A.end(), 100);
+
     // Gives iterator to the first element that is strictly greater than 100 
     std::vector<int>::iterator it2 = std::upper_bound(A.begin(), A.end(), 100);
 
-    std::cout << *it << ", " << *it2 << std::endl;
-    std::cout << it2-it << std::endl;
+    // std::cout << *it << ", " << *it2 << std::endl;
+    // std::cout << it2-it << std::endl;
+
+
+
+
+    // Sorting values 
+    // std::sort(A.begin(), A.end(), f); // vector sorted in ascending order 
+    // print_data(A);
+
+
+    // Printing out values 
+
+    // for (std::vector<int>::iterator it = A.begin(); it != A.end(); it++){
+    //     std::cout << *it << std::endl;
+    // }
+
+    for (auto& x: A){
+        x++; // usng ampercent to shift modify the value by reference 
+        std::cout << x << ", ";
+    }
+
+    std::cout << std::endl;
+    
+
+
 
 
     return 0;
