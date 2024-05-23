@@ -1,15 +1,19 @@
 #ifndef _DOCUMENT_MANAGER_H
 #define _DOCUMENT_MANAGER_H
-#include <string>
-
+#include <iostream>
+#include <unordered_map>
+#include "Document.h"
+#include <vector>
+#include <algorithm>
 
 class DocumentManager{
     private:
-
-
+        std::unordered_map<int, Document*> Documents; // a collection of <docID:Document>
+        std::vector<int> Patrons; // For this work, each patronID essentially represents a patron object even though a patron object is not needed in the implementation (though that would have also been good practice).
+        std::unordered_map<int, std::vector<int>> borrowList; // stores the list of docID to patrons 
 
     public:
-        void addDocument(std::string name,int license_limit);
+        void addDocument(std::string name, int id, int license_limit);
 
         void addPatron(int patronID);
         int search(std::string name); // returns docid if name is in the document collection or 0 if the name is not in the collection 
@@ -19,6 +23,8 @@ class DocumentManager{
 
         void returnDocument(int docid, int patronID);
 
+        std::unordered_map<int, std::vector<int>> getListsOfBorrowers();
+        ~DocumentManager();
 };
 
 
