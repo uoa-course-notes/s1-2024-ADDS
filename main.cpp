@@ -119,7 +119,7 @@ int main(int argc, char** argv){
     // assert(librarian.borrowDocument(d3.getID(), patron1) == true);
 
 
-    // I see ==========================problems======================
+    // I see ==========================problems (fixed)======================
     // assert(librarian.borrowDocument(d3.getID(), patron2) == false);
     // assert(librarian.borrowDocument(d3.getID(), patron3) == false);
     // assert(librarian.borrowDocument(d3.getID(), patron4) == false);
@@ -138,11 +138,49 @@ int main(int argc, char** argv){
     // std::cout << d4.getName() << "'s limit has been reached. Currently already being borrowed by ";
     // librarian.displayBorrowers(); 
 
-    // Alright borrowing seems to be working. Let's ship this off to gradescope first. 
+    // Sign up new patron 
+    // int newPatron = 20;
+    // librarian.borrowDocument(d5.getID(), newPatron);
+    // librarian.borrowDocument(d5.getID(), 100);
+    
+    // librarian.displayPatrons();    
+    // librarian.displayBorrowers(); 
+
+    // librarian.returnDocument(d5.getID(), newPatron);
+    // librarian.displayPatrons();    
+    // librarian.displayBorrowers(); 
+
+    // // std::cout << "======================In main===================";
+    // // std::cin.ignore();
+
+    // librarian.returnDocument(d5.getID(), 100);
+    // librarian.displayPatrons();    
+    // librarian.displayBorrowers(); 
+
+    // from my observations, the list of patrons has removed the desired patrons
+    // but the only trouble is getting the borrower list to also remove that specific borrowers who have returned the documents. 
+    
 
 
 
+    // Great! Gradescope accepts the two. Let's work on my last one. 
 
+    // ===========================
+    // Return documents
+    // ===========================
+    // Right, 3 patrons have borrowed document d4. 
+    // Let's see what happens when one of them returns the document
+    // They shouldn't appear in the borrower's list after that. 
+
+    // librarian.returnDocument(d4.getID(), patron1);
+
+    // // let's check the list of borrowers to see if patron1 has been removed. 
+    // librarian.displayBorrowers();
+
+
+    // std::cout << "Okay..." << std::endl;
+    
+    // std::cin.ignore();
 
 
 

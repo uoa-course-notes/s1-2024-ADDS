@@ -72,18 +72,53 @@ void DocumentManager::returnDocument(int docid, int patronID){
     // Not literally return document per sé but more of,
     // what happens when the patron returns the document? 
 
-    // Then, we need to remove them from the document's list of patrons or borrowers 
-    // However, to be pedantic, we want to make sure whether the patron even exists in the first place 
-    std::vector<int>::iterator foundPatron = std::find(borrowList[docid].begin(), borrowList[docid].end(), patronID);
+    for (auto &p: borrowList){
+        if (p.first == docid){
 
-    if (foundPatron == borrowList[docid].end()) return; // stops the procedure immediately if the patron can't be found. 
+            auto removed = std::find(p.second.begin(), p.second.end(), patronID);
+            p.second.erase(removed);
 
-    // otherwise, assist them in returning the document 
-    else{
-        borrowList[docid].erase(foundPatron); // remove the patron from the corresponding document key 
-        Patrons.erase(foundPatron);
+            auto removedP = std::find(Patrons.begin(), Patrons.end(),patronID);
+            Patrons.erase(removedP);
+
+            // std::cout << docid << " has borrowers: ";
+            // printVector(p.second);
+            // std::cin.ignore();
+            // I can't believe that erase() doesn't even realize the operation in-place!
+            break;
+        }
     }
+    
 }
+// void DocumentManager::returnDocument(int docid, int patronID) {
+//     // Not literally return document per sé but more of,
+//     // what happens when the patron returns the document? 
+
+//     for (auto& p : borrowList) {
+//         if (p.first == docid) {
+//             // Find and remove the patron from the document's borrow list
+//             auto removed = std::find(p.second.begin(), p.second.end(), patronID);
+//             if (removed != p.second.end()) {
+//                 p.second.erase(removed);
+
+//                 // Find and remove the patron from the global list of patrons
+//                 auto removedP = std::find(Patrons.begin(), Patrons.end(), patronID);
+//                 if (removedP != Patrons.end()) {
+//                     Patrons.erase(removedP);
+//                 }
+
+//                 // Debug prints
+//                 // std::cout << docid << " has borrowers: ";
+//                 printVector(p.second);
+//                 // std::cin.ignore();
+//             }
+//             break; // Exit loop after processing the relevant document
+//         }
+//     }
+// }
+
+
+
 
 std::unordered_map<int, std::vector<int>> DocumentManager::getListsOfBorrowers(){return borrowList;}
 
@@ -107,7 +142,12 @@ void DocumentManager::displayBorrowers(){
         printVector(b.second);
     }
     std::cout << std::endl;
-    
+}
+
+
+void DocumentManager::displayPatrons(){
+    std::cout << "All patrons:";
+    printVector(Patrons);
 }
 
 

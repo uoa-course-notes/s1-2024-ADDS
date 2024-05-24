@@ -29,6 +29,7 @@ class DocumentManager{
 
         bool searchPatron(int patronID);
         void displayBorrowers();
+        void displayPatrons();
         void printVector(std::vector<int> S);
 
         ~DocumentManager();
