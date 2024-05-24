@@ -1,37 +1,161 @@
 #include "DocumentManager.h"
+#include <cassert> // include the assert preprocessor micro, which is define din the cassert header file. 
 
-void printVector(std::vector<int> S){
-    std::cout << "<";
-    for (int i = 0; i< S.size(); i++){
-        if (i == S.size() -1) std::cout << S[i];
-        else std::cout << S[i] << ",";
-    }
-    std::cout << ">" << std::endl;;
-}
+
+
+
+
+
 
 
 
 int main(int argc, char** argv){
-    DocumentManager librarian;
-    Document d1("Guides", 1, 10);
-    Document d2("Intro to Algorithms", 4, 10);
-    Document d3("1982", 3, 1);
+    // DocumentManager librarian;
+    // Document d1("Guides", 1, 10);
+    // Document d2("Intro to Algorithms", 4, 10);
+    // Document d3("1982", 3, 1);
+    // Document d4("Calculus", 2, 3);
+    // Document d5("Contemporary Abstract Algebra", 10, 2);
+    // Document d6("Intro_Recursive_Programming", 5, 3);
 
-    std::vector<Document> documents{d1, d2, d3};
+    // std::vector<Document> documents{d1, d2, d3, d4, d5, d6};
 
-    std::cout << "Librarian adding documents: " << std::endl;
-    for (int i=0; i<3; i++){
-        librarian.addDocument(documents[i].getName(), 
-                                documents[i].getID(), 
-                     documents[i].getLimit());
-    }
+    // std::cout << "Librarian adding documents: " << std::endl;
+    // for (int i=0; i<6; i++){
+    //     librarian.addDocument(documents[i].getName(), 
+    //                             documents[i].getID(), 
+    //                  documents[i].getLimit());
+    // }
 
-    std::cout << "Adding completed!" << std::endl;
-
-
-    // Let's print out each document and its borrower. 
+    // std::cout << "Adding completed!" << std::endl;
     
-    std::unordered_map<int, std::vector<int>> borrowList = librarian.getListsOfBorrowers(); // stores the list of docID to patrons 
+    
+    // ======================================================
+    // ====================TESTING=========================== 
+    // ======================================================
+    
+    // Searching 
+    // Let's search for George Orwell's 1982 
+    // std::string search_key = "1982";
+    // int result = librarian.search(search_key);
+    // if (result == d3.getID()) std::cout << "Yes" << std::endl;
+    // else {
+    //     std::cout << "No, insted of " <<d3.getID() <<  " we found " << result << std::endl;
+    // }
+    // the assert macro doesn't provide a parameter for a custom error messages. 
+    // But we can add a description of the error using the comma operator. 
+    // assert(librarian.search(d1.getName()) == d1.getID());
+    // assert(librarian.search(d2.getName()) == d2.getID());
+    // assert(librarian.search(d3.getName()) == d3.getID());
+    // assert(librarian.search(d4.getName()) == d4.getID());
+    // assert(librarian.search(d5.getName()) == d5.getID());
+    // assert(librarian.search(d6.getName()) == d6.getID());
+    // std::cout << "All search queries completed! My search function should be good to go!" << std::endl;
+
+
+    // Borrowing documents. 
+    // ===================================================
+    // Firsly let's generate some sample patrons. 
+    // Syntax: patroni = j where i and j are positive integers
+    // i := part of the identifier
+    // j := patronID of that particular patron 
+    // int patron1 = 2;
+    // int patron2 = 1;
+    // int patron3 = 3;
+    // int patron4 = 9;
+    // int patron5 = 7;
+    // int patron6 = 5;
+    // int patron7 = 6;
+    // int patron8 = 13;
+    // std::vector<int> patrons{patron1, patron2,
+    // patron3, patron4, patron5, patron6, patron7, patron8};
+
+    // // Let 
+    // for (int i=0; i<8; i++){
+    //     librarian.addPatron(patrons[i]);
+    // }
+
+    // ===================================================
+    // Test borrow procedure if a new patron were to borrow a book that is in the collection. 
+    // int newPatron = 19;
+    // int borrowingBook = 3;
+    // assert(librarian.borrowDocument(borrowingBook, newPatron));
+
+    // std::vector<int> Patrons = librarian.getListOfPatrons();
+    // bool result = librarian.searchPatron(newPatron);
+    // assert(result == true);
+    // std::cout << "new patron has been registered" << std::endl;
+    // printVector(Patrons);
+    
+    // Let's do that again, but with a book that is not in our current collection. 
+    // int newPatron = 19;
+    // int borrowingBook = 100;
+    // assert(librarian.borrowDocument(borrowingBook, newPatron) == false);
+    // std::cout << "Case 2 works" << std::endl;
+    
+    // Existing patron borrowing existing book 
+    
+    // assert(librarian.borrowDocument(d1.getID(),patron1) == true);
+    // assert(librarian.borrowDocument(d2.getID(),patron2) == true);
+    // assert(librarian.borrowDocument(d3.getID(),patron3) == true);
+    // assert(librarian.borrowDocument(d4.getID(),patron4) == true);
+    // assert(librarian.borrowDocument(d5.getID(),patron5) == true);
+    // assert(librarian.borrowDocument(d6.getID(),patron6) == true);
+    // std::cout << "Existing patron can borrow existing books!" << std::endl;
+    // ===================================================
+    
+
+    // Existing patrons borrowing non-existent book 
+    // assert(librarian.borrowDocument(100, 1) == false);
+    // assert(librarian.borrowDocument(101, 2) == false);
+    // assert(librarian.borrowDocument(102, 3) == false);
+    // assert(librarian.borrowDocument(130, 13) == false);
+    // assert(librarian.borrowDocument(140, 5) == false);
+    // assert(librarian.borrowDocument(160, 6) == false);
+    // std::cout << "Existing patron can indeed not borrow non-existing books!" << std::endl;
+
+
+    // let's test the license limit of a particular book 
+    // assert(librarian.borrowDocument(d3.getID(), patron1) == true);
+
+
+    // I see ==========================problems======================
+    // assert(librarian.borrowDocument(d3.getID(), patron2) == false);
+    // assert(librarian.borrowDocument(d3.getID(), patron3) == false);
+    // assert(librarian.borrowDocument(d3.getID(), patron4) == false);
+
+    // std::cout << d3.getName() << "'s limit has been reached. " << std::endl;
+    // Let's check the borrower list 
+//    librarian.displayBorrowers();
+
+    // Let's test other document's license limit 
+
+
+    // assert(librarian.borrowDocument(d4.getID(), patron1) == true);
+    // assert(librarian.borrowDocument(d4.getID(), patron2) == true);
+    // assert(librarian.borrowDocument(d4.getID(), patron3) == true);
+    // assert(librarian.borrowDocument(d4.getID(), patron4) == false);
+    // std::cout << d4.getName() << "'s limit has been reached. Currently already being borrowed by ";
+    // librarian.displayBorrowers(); 
+
+    // Alright borrowing seems to be working. Let's ship this off to gradescope first. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // std::unordered_map<int, std::vector<int>> borrowList = librarian.getListsOfBorrowers(); // stores the list of docID to patrons 
 
     // for (auto a: borrowList){
     //     std::cout << 

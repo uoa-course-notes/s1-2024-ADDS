@@ -24,9 +24,21 @@ class DocumentManager{
         void returnDocument(int docid, int patronID);
 
         std::unordered_map<int, std::vector<int>> getListsOfBorrowers();
+
+        std::vector<int> getListOfPatrons();
+
+        bool searchPatron(int patronID);
+        void displayBorrowers();
+        void printVector(std::vector<int> S);
+
         ~DocumentManager();
 };
 
+
+/*
+There's still bugs to be fixed! I am going to have a look at this tonight and debug this according to Gradescope input. 
+
+*/
 
 
 
