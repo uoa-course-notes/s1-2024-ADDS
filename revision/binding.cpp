@@ -1,0 +1,1 @@
+https://www.scaler.com/topics/static-binding-and-dynamic-binding/
