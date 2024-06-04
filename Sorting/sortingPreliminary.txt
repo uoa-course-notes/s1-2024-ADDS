@@ -1,0 +1,8 @@
+## Problem of sorting 
+
+
+Given an array T = <v_1, v_2, ..., v_n>. We define an order on T with < and > in exactly the manner that we would normally view them. 
+
+We want to develop a set of procedures that can mimic a permutation function in reordering T to become T' where every element in it is denoted by \phi_i = \phi(v_i) where i = 1, ..., n. And \phi(v_i) is defined in such a way that \phi_i < \phi_(i+1) for all i's. 
+
+There are two classes of sorting procedures which we'll exhibit - Comparison-based and distribution-based algorithms. Moreover, we will also analyze their time (and space) complexity using asymptotic notations that we'll also provide references to. 
