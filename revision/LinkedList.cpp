@@ -169,20 +169,10 @@ int LinkedList::search(int target){
     // return x+1;
 }
 
-// void LinkedList::printList(){
-//     // std::cout << "In print list()" << std::endl;
-    
-//     std::cout << "[";
-//     Node* curr = head;
-//     int i = 0;
-//     while (curr != nullptr){
-//         if (i == listSize - 1) std::cout << curr -> getData();
-//         else std::cout << curr -> getData() << " ";
-//         i++;
-//         curr = curr ->getLink();
-//     }
-//     std::cout << "]" << std::endl;
-// }
+/**
+ * @brief Print the entire list. 
+ * @param None 
+ */
 void LinkedList::printList() {
     Node* curr = head;
     std::cout << "[";
